@@ -1,0 +1,87 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+%\begin{tabular}{c c c c c c c c c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{8}{c}{Forward} & \multicolumn{8}{c}{Bundle} \\ \hline
+% & MAE & MRE & MRPD & Mean Residual & Miscal. Area & Std. MAE & Std. MRE & Std. RPD & MAE & MRE & MRPD & Mean Residual & Miscal. Area & Std. MAE & Std. MRE & Std. RPD\\
+% FCNN & {{ FCNN_forward_eb_mae }} & {{ FCNN_forward_eb_mre }} & {{ FCNN_forward_eb_rpd }} & {{ FCNN_forward_eb_residual }} & - & - & - & - & {{ FCNN_bundle_eb_mae }} & {{ FCNN_bundle_eb_mre }} & {{ FCNN_bundle_eb_rpd }} & {{ FCNN_bundle_eb_residual }} & - & - & - & - \\
+% \hline
+% NLM & {{ NLM_forward_no_eb_mae }} & {{ NLM_forward_no_eb_mre }} & {{ NLM_forward_no_eb_rpd }} & {{ NLM_forward_no_eb_residual }} & {{ NLM_forward_no_eb_miscal_area }} & {{ NLM_forward_no_eb_std_mae }} & {{ NLM_forward_no_eb_std_mre }} & {{ NLM_forward_no_eb_std_rpd }} & {{ NLM_bundle_no_eb_mae }} & {{ NLM_bundle_no_eb_mre }} & {{ NLM_bundle_no_eb_rpd }} & {{ NLM_bundle_no_eb_residual }} & {{ NLM_bundle_no_eb_miscal_area }} & {{ NLM_bundle_no_eb_std_mae }} & {{ NLM_bundle_no_eb_std_mre }} & {{ NLM_bundle_no_eb_std_rpd }} \\
+% BBB & {{ BBB_forward_no_eb_mae }} & {{ BBB_forward_no_eb_mre }} & {{ BBB_forward_no_eb_rpd }} & {{ BBB_forward_no_eb_residual }} & {{ BBB_forward_no_eb_miscal_area }} & {{ BBB_forward_no_eb_std_mae }} & {{ BBB_forward_no_eb_std_mre }} & {{ BBB_forward_no_eb_std_rpd }} & {{ BBB_bundle_no_eb_mae }} & {{ BBB_bundle_no_eb_mre }} & {{ BBB_bundle_no_eb_rpd }} & {{ BBB_bundle_no_eb_residual }} & {{ BBB_bundle_no_eb_miscal_area }} & {{ BBB_bundle_no_eb_std_mae }} & {{ BBB_bundle_no_eb_std_mre }} & {{ BBB_bundle_no_eb_std_rpd }} \\
+% HMC & {{ HMC_forward_no_eb_mae }} & {{ HMC_forward_no_eb_mre }} & {{ HMC_forward_no_eb_rpd }} & {{ HMC_forward_no_eb_residual }} & {{ HMC_forward_no_eb_miscal_area }} & {{ HMC_forward_no_eb_std_mae }} & {{ HMC_forward_no_eb_std_mre }} & {{ HMC_forward_no_eb_std_rpd }} & {{ HMC_bundle_no_eb_mae }} & {{ HMC_bundle_no_eb_mre }} & {{ HMC_bundle_no_eb_rpd }} & {{ HMC_bundle_no_eb_residual }} & {{ HMC_bundle_no_eb_miscal_area }} & {{ HMC_bundle_no_eb_std_mae }} & {{ HMC_bundle_no_eb_std_mre }} & {{ HMC_bundle_no_eb_std_rpd }} \\
+% \hline
+% NLM + EB & {{ NLM_forward_eb_mae }} & {{ NLM_forward_eb_mre }} & {{ NLM_forward_eb_rpd }} & {{ NLM_forward_eb_residual }} & {{ NLM_forward_eb_miscal_area }} & {{ NLM_forward_eb_std_mae }} & {{ NLM_forward_eb_std_mre }} & {{ NLM_forward_eb_std_rpd }} & {{ NLM_bundle_eb_mae }} & {{ NLM_bundle_eb_mre }} & {{ NLM_bundle_eb_rpd }} & {{ NLM_bundle_eb_residual }} & {{ NLM_bundle_eb_miscal_area }} & {{ NLM_bundle_eb_std_mae }} & {{ NLM_bundle_eb_std_mre }} & {{ NLM_bundle_eb_std_rpd }} \\
+% BBB + EB & {{ BBB_forward_eb_mae }} & {{ BBB_forward_eb_mre }} & {{ BBB_forward_eb_rpd }} & {{ BBB_forward_eb_residual }} & {{ BBB_forward_eb_miscal_area }} & {{ BBB_forward_eb_std_mae }} & {{ BBB_forward_eb_std_mre }} & {{ BBB_forward_eb_std_rpd }} & {{ BBB_bundle_eb_mae }} & {{ BBB_bundle_eb_mre }} & {{ BBB_bundle_eb_rpd }} & {{ BBB_bundle_eb_residual }} & {{ BBB_bundle_eb_miscal_area }} & {{ BBB_bundle_eb_std_mae }} & {{ BBB_bundle_eb_std_mre }} & {{ BBB_bundle_eb_std_rpd }} \\
+% HMC + EB & {{ HMC_forward_eb_mae }} & {{ HMC_forward_eb_mre }} & {{ HMC_forward_eb_rpd }} & {{ HMC_forward_eb_residual }} & {{ HMC_forward_eb_miscal_area }} & {{ HMC_forward_eb_std_mae }} & {{ HMC_forward_eb_std_mre }} & {{ HMC_forward_eb_std_rpd }} & {{ HMC_bundle_eb_mae }} & {{ HMC_bundle_eb_mre }} & {{ HMC_bundle_eb_rpd }} & {{ HMC_bundle_eb_residual }} & {{ HMC_bundle_eb_miscal_area }} & {{ HMC_bundle_eb_std_mae }} & {{ HMC_bundle_eb_std_mre }} & {{ HMC_bundle_eb_std_rpd }} \\
+%\hline
+%\hline
+%\end{tabular}
+
+
+%\begin{tabular}{c c c c c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{6}{c}{Forward} & \multicolumn{6}{c}{Bundle} \\ \hline
+% & MRE & MRPD & Mean Residual & Miscal. Area & Std. MRE & Std. RPD & MRE & MRPD & Mean Residual & Miscal. Area & Std. MRE & Std. RPD\\
+% FCNN & {{ FCNN_forward_eb_mre }} & {{ FCNN_forward_eb_rpd }} & {{ FCNN_forward_eb_residual }} & - & - & - & {{ FCNN_bundle_eb_mre }} & {{ FCNN_bundle_eb_rpd }} & {{ FCNN_bundle_eb_residual }} & - & - & - \\
+% \hline
+% NLM & {{ NLM_forward_no_eb_mre }} & {{ NLM_forward_no_eb_rpd }} & {{ NLM_forward_no_eb_residual }} & {{ NLM_forward_no_eb_miscal_area }} & {{ NLM_forward_no_eb_std_mre }} & {{ NLM_forward_no_eb_std_rpd }} & {{ NLM_bundle_no_eb_mre }} & {{ NLM_bundle_no_eb_rpd }} & {{ NLM_bundle_no_eb_residual }} & {{ NLM_bundle_no_eb_miscal_area }} & {{ NLM_bundle_no_eb_std_mre }} & {{ NLM_bundle_no_eb_std_rpd }} \\
+% BBB & {{ BBB_forward_no_eb_mre }} & {{ BBB_forward_no_eb_rpd }} & {{ BBB_forward_no_eb_residual }} & {{ BBB_forward_no_eb_miscal_area }} & {{ BBB_forward_no_eb_std_mre }} & {{ BBB_forward_no_eb_std_rpd }} & {{ BBB_bundle_no_eb_mre }} & {{ BBB_bundle_no_eb_rpd }} & {{ BBB_bundle_no_eb_residual }} & {{ BBB_bundle_no_eb_miscal_area }} & {{ BBB_bundle_no_eb_std_mre }} & {{ BBB_bundle_no_eb_std_rpd }} \\
+% HMC & {{ HMC_forward_no_eb_mre }} & {{ HMC_forward_no_eb_rpd }} & {{ HMC_forward_no_eb_residual }} & {{ HMC_forward_no_eb_miscal_area }} & {{ HMC_forward_no_eb_std_mre }} & {{ HMC_forward_no_eb_std_rpd }} & {{ HMC_bundle_no_eb_mre }} & {{ HMC_bundle_no_eb_rpd }} & {{ HMC_bundle_no_eb_residual }} & {{ HMC_bundle_no_eb_miscal_area }} & {{ HMC_bundle_no_eb_std_mre }} & {{ HMC_bundle_no_eb_std_rpd }} \\
+% \hline
+% NLM + EB & {{ NLM_forward_eb_mre }} & {{ NLM_forward_eb_rpd }} & {{ NLM_forward_eb_residual }} & {{ NLM_forward_eb_miscal_area }} & {{ NLM_forward_eb_std_mre }} & {{ NLM_forward_eb_std_rpd }} & {{ NLM_bundle_eb_mre }} & {{ NLM_bundle_eb_rpd }} & {{ NLM_bundle_eb_residual }} & {{ NLM_bundle_eb_miscal_area }} & {{ NLM_bundle_eb_std_mre }} & {{ NLM_bundle_eb_std_rpd }} \\
+% BBB + EB & {{ BBB_forward_eb_mre }} & {{ BBB_forward_eb_rpd }} & {{ BBB_forward_eb_residual }} & {{ BBB_forward_eb_miscal_area }} & {{ BBB_forward_eb_std_mre }} & {{ BBB_forward_eb_std_rpd }} & {{ BBB_bundle_eb_mre }} & {{ BBB_bundle_eb_rpd }} & {{ BBB_bundle_eb_residual }} & {{ BBB_bundle_eb_miscal_area }} & {{ BBB_bundle_eb_std_mre }} & {{ BBB_bundle_eb_std_rpd }} \\
+% HMC + EB & {{ HMC_forward_eb_mre }} & {{ HMC_forward_eb_rpd }} & {{ HMC_forward_eb_residual }} & {{ HMC_forward_eb_miscal_area }} & {{ HMC_forward_eb_std_mre }} & {{ HMC_forward_eb_std_rpd }} & {{ HMC_bundle_eb_mre }} & {{ HMC_bundle_eb_rpd }} & {{ HMC_bundle_eb_residual }} & {{ HMC_bundle_eb_miscal_area }} & {{ HMC_bundle_eb_std_mre }} & {{ HMC_bundle_eb_std_rpd }} \\
+%\hline
+%\hline
+%\end{tabular}
+
+%\begin{tabular}{c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{4}{c}{Forward} & \multicolumn{4}{c}{Bundle} \\ \hline
+% & MRE & Mean Residual & Miscal. Area & Std. MRE & MRE & Mean Residual & Miscal. Area & Std. MRE\\
+% FCNN & {{ FCNN_forward_eb_mre }} & {{ FCNN_forward_eb_residual }} & - & - & {{ FCNN_bundle_eb_mre }} & {{ FCNN_bundle_eb_residual }} & - & - \\
+% \hline
+% NLM & {{ NLM_forward_no_eb_mre }} & {{ NLM_forward_no_eb_residual }} & {{ NLM_forward_no_eb_miscal_area }} & {{ NLM_forward_no_eb_std_mre }} & {{ NLM_bundle_no_eb_mre }} & {{ NLM_bundle_no_eb_residual }} & {{ NLM_bundle_no_eb_miscal_area }} & {{ NLM_bundle_no_eb_std_mre }} \\
+% BBB & {{ BBB_forward_no_eb_mre }} & {{ BBB_forward_no_eb_residual }} & {{ BBB_forward_no_eb_miscal_area }} & {{ BBB_forward_no_eb_std_mre }} & {{ BBB_bundle_no_eb_mre }} & {{ BBB_bundle_no_eb_residual }} & {{ BBB_bundle_no_eb_miscal_area }} & {{ BBB_bundle_no_eb_std_mre }} \\
+% HMC & {{ HMC_forward_no_eb_mre }} & {{ HMC_forward_no_eb_residual }} & {{ HMC_forward_no_eb_miscal_area }} & {{ HMC_forward_no_eb_std_mre }} & {{ HMC_bundle_no_eb_mre }} & {{ HMC_bundle_no_eb_residual }} & {{ HMC_bundle_no_eb_miscal_area }} & {{ HMC_bundle_no_eb_std_mre }} \\
+% \hline
+% NLM + EB & {{ NLM_forward_eb_mre }} & {{ NLM_forward_eb_residual }} & {{ NLM_forward_eb_miscal_area }} & {{ NLM_forward_eb_std_mre }} & {{ NLM_bundle_eb_mre }} & {{ NLM_bundle_eb_residual }} & {{ NLM_bundle_eb_miscal_area }} & {{ NLM_bundle_eb_std_mre }} \\
+% BBB + EB & {{ BBB_forward_eb_mre }} & {{ BBB_forward_eb_residual }} & {{ BBB_forward_eb_miscal_area }} & {{ BBB_forward_eb_std_mre }} & {{ BBB_bundle_eb_mre }} & {{ BBB_bundle_eb_residual }} & {{ BBB_bundle_eb_miscal_area }} & {{ BBB_bundle_eb_std_mre }} \\
+% HMC + EB & {{ HMC_forward_eb_mre }} & {{ HMC_forward_eb_residual }} & {{ HMC_forward_eb_miscal_area }} & {{ HMC_forward_eb_std_mre }} & {{ HMC_bundle_eb_mre }} & {{ HMC_bundle_eb_residual }} & {{ HMC_bundle_eb_miscal_area }} & {{ HMC_bundle_eb_std_mre }} \\
+%\hline
+%\hline
+%\end{tabular}
+
+\begin{tabular}{c | c c c c c c c c c c c c c c c c | c c c c c c c c c c c c c c c c}
+\hline
+\hline
+Method &  \multicolumn{16}{c}{Forward} & \multicolumn{16}{c}{Bundle} \\ \hline
+ & MRE & Mean Residual & Miscal. Area & RMS Cal. & MA Cal. & Sharpness & NLL & CRPS & Check & Interval & Acc. MAE & Acc. RMSE & Acc. MDAE & Acc. MARPD & Acc. R2 & Acc. Corr. & MRE & Mean Residual & Miscal. Area & RMS Cal. & MA Cal. & Sharpness & NLL & CRPS & Check & Interval & Acc. MAE & Acc. RMSE & Acc. MDAE & Acc. MARPD & Acc. R2 & Acc. Corr.\\
+ FCNN & {{ FCNN_forward_eb_mre }} & {{ FCNN_forward_eb_residual }} & - & - & - & - & - & - & - & - & - & - & - & - & - & - & {{ FCNN_bundle_eb_mre }} & {{ FCNN_bundle_eb_residual }} & - & - & - & - & - & - & - & - & - & - & - & - & - & -\\
+ \hline
+ NLM & {{ NLM_forward_no_eb_mre }} & {{ NLM_forward_no_eb_residual }} & {{ NLM_forward_no_eb_miscal_area }} & {{ NLM_forward_no_eb_rms_cal }} & {{ NLM_forward_no_eb_ma_cal }} & {{ NLM_forward_no_eb_sharpness }} & {{ NLM_forward_no_eb_nll }} & {{ NLM_forward_no_eb_crps }} & {{ NLM_forward_no_eb_check }} & {{ NLM_forward_no_eb_interval }} & {{ NLM_forward_no_eb_acc_mae }} & {{ NLM_forward_no_eb_acc_rmse }} & {{ NLM_forward_no_eb_acc_mdae }} & {{ NLM_forward_no_eb_acc_marpd }} & {{ NLM_forward_no_eb_acc_r2 }} & {{ NLM_forward_no_eb_acc_corr }} & {{ NLM_bundle_no_eb_mre }} & {{ NLM_bundle_no_eb_residual }} & {{ NLM_bundle_no_eb_miscal_area }} & {{ NLM_bundle_no_eb_rms_cal }} & {{ NLM_bundle_no_eb_ma_cal }} & {{ NLM_bundle_no_eb_sharpness }} & {{ NLM_bundle_no_eb_nll }} & {{ NLM_bundle_no_eb_crps }} & {{ NLM_bundle_no_eb_check }} & {{ NLM_bundle_no_eb_interval }} & {{ NLM_bundle_no_eb_acc_mae }} & {{ NLM_bundle_no_eb_acc_rmse }} & {{ NLM_bundle_no_eb_acc_mdae }} & {{ NLM_bundle_no_eb_acc_marpd }} & {{ NLM_bundle_no_eb_acc_r2 }} & {{ NLM_bundle_no_eb_acc_corr }} \\
+ BBB & {{ BBB_forward_no_eb_mre }} & {{ BBB_forward_no_eb_residual }} & {{ BBB_forward_no_eb_miscal_area }} & {{ BBB_forward_no_eb_rms_cal }} & {{ BBB_forward_no_eb_ma_cal }} & {{ BBB_forward_no_eb_sharpness }} & {{ BBB_forward_no_eb_nll }} & {{ BBB_forward_no_eb_crps }} & {{ BBB_forward_no_eb_check }} & {{ BBB_forward_no_eb_interval }} & {{ BBB_forward_no_eb_acc_mae }} & {{ BBB_forward_no_eb_acc_rmse }} & {{ BBB_forward_no_eb_acc_mdae }} & {{ BBB_forward_no_eb_acc_marpd }} & {{ BBB_forward_no_eb_acc_r2 }} & {{ BBB_forward_no_eb_acc_corr }} & {{ BBB_bundle_no_eb_mre }} & {{ BBB_bundle_no_eb_residual }} & {{ BBB_bundle_no_eb_miscal_area }} & {{ BBB_bundle_no_eb_rms_cal }} & {{ BBB_bundle_no_eb_ma_cal }} & {{ BBB_bundle_no_eb_sharpness }} & {{ BBB_bundle_no_eb_nll }} & {{ BBB_bundle_no_eb_crps }} & {{ BBB_bundle_no_eb_check }} & {{ BBB_bundle_no_eb_interval }} & {{ BBB_bundle_no_eb_acc_mae }} & {{ BBB_bundle_no_eb_acc_rmse }} & {{ BBB_bundle_no_eb_acc_mdae }} & {{ BBB_bundle_no_eb_acc_marpd }} & {{ BBB_bundle_no_eb_acc_r2 }} & {{ BBB_bundle_no_eb_acc_corr }} \\
+ HMC & {{ HMC_forward_no_eb_mre }} & {{ HMC_forward_no_eb_residual }} & {{ HMC_forward_no_eb_miscal_area }} & {{ HMC_forward_no_eb_rms_cal }} & {{ HMC_forward_no_eb_ma_cal }} & {{ HMC_forward_no_eb_sharpness }} & {{ HMC_forward_no_eb_nll }} & {{ HMC_forward_no_eb_crps }} & {{ HMC_forward_no_eb_check }} & {{ HMC_forward_no_eb_interval }} & {{ HMC_forward_no_eb_acc_mae }} & {{ HMC_forward_no_eb_acc_rmse }} & {{ HMC_forward_no_eb_acc_mdae }} & {{ HMC_forward_no_eb_acc_marpd }} & {{ HMC_forward_no_eb_acc_r2 }} & {{ HMC_forward_no_eb_acc_corr }} & {{ HMC_bundle_no_eb_mre }} & {{ HMC_bundle_no_eb_residual }} & {{ HMC_bundle_no_eb_miscal_area }} & {{ HMC_bundle_no_eb_rms_cal }} & {{ HMC_bundle_no_eb_ma_cal }} & {{ HMC_bundle_no_eb_sharpness }} & {{ HMC_bundle_no_eb_nll }} & {{ HMC_bundle_no_eb_crps }} & {{ HMC_bundle_no_eb_check }} & {{ HMC_bundle_no_eb_interval }} & {{ HMC_bundle_no_eb_acc_mae }} & {{ HMC_bundle_no_eb_acc_rmse }} & {{ HMC_bundle_no_eb_acc_mdae }} & {{ HMC_bundle_no_eb_acc_marpd }} & {{ HMC_bundle_no_eb_acc_r2 }} & {{ HMC_bundle_no_eb_acc_corr }} \\
+ \hline
+ NLM + EB & {{ NLM_forward_eb_mre }} & {{ NLM_forward_eb_residual }} & {{ NLM_forward_eb_miscal_area }} & {{ NLM_forward_eb_rms_cal }} & {{ NLM_forward_eb_ma_cal }} & {{ NLM_forward_eb_sharpness }} & {{ NLM_forward_eb_nll }} & {{ NLM_forward_eb_crps }} & {{ NLM_forward_eb_check }} & {{ NLM_forward_eb_interval }} & {{ NLM_forward_eb_acc_mae }} & {{ NLM_forward_eb_acc_rmse }} & {{ NLM_forward_eb_acc_mdae }} & {{ NLM_forward_eb_acc_marpd }} & {{ NLM_forward_eb_acc_r2 }} & {{ NLM_forward_eb_acc_corr }} & {{ NLM_bundle_eb_mre }} & {{ NLM_bundle_eb_residual }} & {{ NLM_bundle_eb_miscal_area }} & {{ NLM_bundle_eb_rms_cal }} & {{ NLM_bundle_eb_ma_cal }} & {{ NLM_bundle_eb_sharpness }} & {{ NLM_bundle_eb_nll }} & {{ NLM_bundle_eb_crps }} & {{ NLM_bundle_eb_check }} & {{ NLM_bundle_eb_interval }} & {{ NLM_bundle_eb_acc_mae }} & {{ NLM_bundle_eb_acc_rmse }} & {{ NLM_bundle_eb_acc_mdae }} & {{ NLM_bundle_eb_acc_marpd }} & {{ NLM_bundle_eb_acc_r2 }} & {{ NLM_bundle_eb_acc_corr }} \\
+ BBB + EB & {{ BBB_forward_eb_mre }} & {{ BBB_forward_eb_residual }} & {{ BBB_forward_eb_miscal_area }} & {{ BBB_forward_eb_rms_cal }} & {{ BBB_forward_eb_ma_cal }} & {{ BBB_forward_eb_sharpness }} & {{ BBB_forward_eb_nll }} & {{ BBB_forward_eb_crps }} & {{ BBB_forward_eb_check }} & {{ BBB_forward_eb_interval }} & {{ BBB_forward_eb_acc_mae }} & {{ BBB_forward_eb_acc_rmse }} & {{ BBB_forward_eb_acc_mdae }} & {{ BBB_forward_eb_acc_marpd }} & {{ BBB_forward_eb_acc_r2 }} & {{ BBB_forward_eb_acc_corr }} & {{ BBB_bundle_eb_mre }} & {{ BBB_bundle_eb_residual }} & {{ BBB_bundle_eb_miscal_area }} & {{ BBB_bundle_eb_rms_cal }} & {{ BBB_bundle_eb_ma_cal }} & {{ BBB_bundle_eb_sharpness }} & {{ BBB_bundle_eb_nll }} & {{ BBB_bundle_eb_crps }} & {{ BBB_bundle_eb_check }} & {{ BBB_bundle_eb_interval }} & {{ BBB_bundle_eb_acc_mae }} & {{ BBB_bundle_eb_acc_rmse }} & {{ BBB_bundle_eb_acc_mdae }} & {{ BBB_bundle_eb_acc_marpd }} & {{ BBB_bundle_eb_acc_r2 }} & {{ BBB_bundle_eb_acc_corr }} \\
+ HMC + EB & {{ HMC_forward_eb_mre }} & {{ HMC_forward_eb_residual }} & {{ HMC_forward_eb_miscal_area }} & {{ HMC_forward_eb_rms_cal }} & {{ HMC_forward_eb_ma_cal }} & {{ HMC_forward_eb_sharpness }} & {{ HMC_forward_eb_nll }} & {{ HMC_forward_eb_crps }} & {{ HMC_forward_eb_check }} & {{ HMC_forward_eb_interval }} & {{ HMC_forward_eb_acc_mae }} & {{ HMC_forward_eb_acc_rmse }} & {{ HMC_forward_eb_acc_mdae }} & {{ HMC_forward_eb_acc_marpd }} & {{ HMC_forward_eb_acc_r2 }} & {{ HMC_forward_eb_acc_corr }} & {{ HMC_bundle_eb_mre }} & {{ HMC_bundle_eb_residual }} & {{ HMC_bundle_eb_miscal_area }} & {{ HMC_bundle_eb_rms_cal }} & {{ HMC_bundle_eb_ma_cal }} & {{ HMC_bundle_eb_sharpness }} & {{ HMC_bundle_eb_nll }} & {{ HMC_bundle_eb_crps }} & {{ HMC_bundle_eb_check }} & {{ HMC_bundle_eb_interval }} & {{ HMC_bundle_eb_acc_mae }} & {{ HMC_bundle_eb_acc_rmse }} & {{ HMC_bundle_eb_acc_mdae }} & {{ HMC_bundle_eb_acc_marpd }} & {{ HMC_bundle_eb_acc_r2 }} & {{ HMC_bundle_eb_acc_corr }} \\
+\hline
+\hline
+\end{tabular}
+
+
+\end{document}

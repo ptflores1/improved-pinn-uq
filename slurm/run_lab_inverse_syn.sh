@@ -1,0 +1,4 @@
+sbatch slurm/lab_inverse_lab_syn_fcnn_bundle.sh
+sbatch slurm/lab_inverse_lab_syn_nlm_bundle.sh
+sbatch slurm/lab_inverse_lab_syn_bbb_bundle.sh
+sbatch slurm/lab_inverse_lab_syn_hmc_bundle.sh

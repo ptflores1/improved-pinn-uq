@@ -1,0 +1,27 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+\begin{tabular}{c c c c}
+
+\hline
+\hline
+Method & $b$ & $\Omega_{m,0}$ & $H_0$ \\ \hline
+ FCNN & {{ FCNN_no_eb_b_mean }} $\pm$ {{ FCNN_no_eb_b_std }} & {{ FCNN_no_eb_omega_mean }} $\pm$ {{ FCNN_no_eb_omega_std }} & {{ FCNN_no_eb_h0_mean }} $\pm$ {{ FCNN_no_eb_h0_std }} \\
+ NLM  & {{ NLM_no_eb_b_mean }} $\pm$ {{ NLM_no_eb_b_std }} & {{ NLM_no_eb_omega_mean }} $\pm$ {{ NLM_no_eb_omega_std }} & {{ NLM_no_eb_h0_mean }} $\pm$ {{ NLM_no_eb_h0_std }} \\
+ BBB  & {{ BBB_no_eb_b_mean }} $\pm$ {{ BBB_no_eb_b_std }} & {{ BBB_no_eb_omega_mean }} $\pm$ {{ BBB_no_eb_omega_std }} & {{ BBB_no_eb_h0_mean }} $\pm$ {{ BBB_no_eb_h0_std }} \\
+ HMC  & {{ HMC_no_eb_b_mean }} $\pm$ {{ HMC_no_eb_b_std }} & {{ HMC_no_eb_omega_mean }} $\pm$ {{ HMC_no_eb_omega_std }} & {{ HMC_no_eb_h0_mean }} $\pm$ {{ HMC_no_eb_h0_std }} \\
+\hline
+\hline
+\end{tabular}
+
+
+\end{document}

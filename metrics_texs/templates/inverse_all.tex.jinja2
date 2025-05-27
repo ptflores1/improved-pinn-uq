@@ -1,0 +1,54 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+\begin{tabular}{c c c c c c c c}
+\hline
+\hline
+Equation & Method & $w_0$ & $w_1$ & $\lambda$ & $b$ & $\Omega_{m,0}$ & $H_0$ \\ 
+\hline
+ \multirow{7}{*}{\rotatebox[origin=c]{90}{$\Lambda$CDM}} & FCNN & - & - & - & - & {{ lcdm_FCNN_no_eb_omega_mean }} $\pm$ {{ lcdm_FCNN_no_eb_omega_std }} & {{ lcdm_FCNN_no_eb_h0_mean }} $\pm$ {{ lcdm_FCNN_no_eb_h0_std }} \\
+ \cline{2-8}
+ & NLM & - & - & - & - & {{ lcdm_NLM_no_eb_omega_mean }} $\pm$ {{ lcdm_NLM_no_eb_omega_std }} & {{ lcdm_NLM_no_eb_h0_mean }} $\pm$ {{ lcdm_NLM_no_eb_h0_std }} \\
+ & BBB & - & - & - & - & {{ lcdm_BBB_no_eb_omega_mean }} $\pm$ {{ lcdm_BBB_no_eb_omega_std }} & {{ lcdm_BBB_no_eb_h0_mean }} $\pm$ {{ lcdm_BBB_no_eb_h0_std }} \\
+ & HMC & - & - & - & - & {{ lcdm_HMC_no_eb_omega_mean }} $\pm$ {{ lcdm_HMC_no_eb_omega_std }} & {{ lcdm_HMC_no_eb_h0_mean }} $\pm$ {{ lcdm_HMC_no_eb_h0_std }} \\
+ \cline{2-8}
+ & NLM + EB & - & - & - & - & {{ lcdm_NLM_eb_omega_mean }} $\pm$ {{ lcdm_NLM_eb_omega_std }} & {{ lcdm_NLM_eb_h0_mean }} $\pm$ {{ lcdm_NLM_eb_h0_std }} \\
+ & BBB + EB & - & - & - & - & {{ lcdm_BBB_eb_omega_mean }} $\pm$ {{ lcdm_BBB_eb_omega_std }} & {{ lcdm_BBB_eb_h0_mean }} $\pm$ {{ lcdm_BBB_eb_h0_std }} \\
+ & HMC + EB & - & - & - & - & {{ lcdm_HMC_eb_omega_mean }} $\pm$ {{ lcdm_HMC_eb_omega_std }} & {{ lcdm_HMC_eb_h0_mean }} $\pm$ {{ lcdm_HMC_eb_h0_std }} \\
+ \hline
+ \multirow{7}{*}{\rotatebox[origin=c]{90}{CPL}} & FCNN & {{ cpl_FCNN_no_eb_w0_mean }} $\pm$ {{ cpl_FCNN_no_eb_w0_std }} & {{ cpl_FCNN_no_eb_w1_mean }} $\pm$ {{ cpl_FCNN_no_eb_w1_std }} & - & - & {{ cpl_FCNN_no_eb_omega_mean }} $\pm$ {{ cpl_FCNN_no_eb_omega_std }} & {{ cpl_FCNN_no_eb_h0_mean }} $\pm$ {{ cpl_FCNN_no_eb_h0_std }} \\
+ \cline{2-8}
+ & NLM & {{ cpl_NLM_no_eb_w0_mean }} $\pm$ {{ cpl_NLM_no_eb_w0_std }} & {{ cpl_NLM_no_eb_w1_mean }} $\pm$ {{ cpl_NLM_no_eb_w1_std }} & - & - & {{ cpl_NLM_no_eb_omega_mean }} $\pm$ {{ cpl_NLM_no_eb_omega_std }} & {{ cpl_NLM_no_eb_h0_mean }} $\pm$ {{ cpl_NLM_no_eb_h0_std }} \\
+ & BBB & {{ cpl_BBB_no_eb_w0_mean }} $\pm$ {{ cpl_BBB_no_eb_w0_std }} & {{ cpl_BBB_no_eb_w1_mean }} $\pm$ {{ cpl_BBB_no_eb_w1_std }} & - & - & {{ cpl_BBB_no_eb_omega_mean }} $\pm$ {{ cpl_BBB_no_eb_omega_std }} & {{ cpl_BBB_no_eb_h0_mean }} $\pm$ {{ cpl_BBB_no_eb_h0_std }} \\
+ & HMC & {{ cpl_HMC_no_eb_w0_mean }} $\pm$ {{ cpl_HMC_no_eb_w0_std }} & {{ cpl_HMC_no_eb_w1_mean }} $\pm$ {{ cpl_HMC_no_eb_w1_std }} & - & - & {{ cpl_HMC_no_eb_omega_mean }} $\pm$ {{ cpl_HMC_no_eb_omega_std }} & {{ cpl_HMC_no_eb_h0_mean }} $\pm$ {{ cpl_HMC_no_eb_h0_std }} \\
+ \cline{2-8}
+ & NLM + EB & {{ cpl_NLM_eb_w0_mean }} $\pm$ {{ cpl_NLM_eb_w0_std }} & {{ cpl_NLM_eb_w1_mean }} $\pm$ {{ cpl_NLM_eb_w1_std }} & - & - & {{ cpl_NLM_eb_omega_mean }} $\pm$ {{ cpl_NLM_eb_omega_std }} & {{ cpl_NLM_eb_h0_mean }} $\pm$ {{ cpl_NLM_eb_h0_std }} \\
+ & BBB + EB & {{ cpl_BBB_eb_w0_mean }} $\pm$ {{ cpl_BBB_eb_w0_std }} & {{ cpl_BBB_eb_w1_mean }} $\pm$ {{ cpl_BBB_eb_w1_std }} & - & - & {{ cpl_BBB_eb_omega_mean }} $\pm$ {{ cpl_BBB_eb_omega_std }} & {{ cpl_BBB_eb_h0_mean }} $\pm$ {{ cpl_BBB_eb_h0_std }} \\
+ & HMC + EB & {{ cpl_HMC_eb_w0_mean }} $\pm$ {{ cpl_HMC_eb_w0_std }} & {{ cpl_HMC_eb_w1_mean }} $\pm$ {{ cpl_HMC_eb_w1_std }} & - & - & {{ cpl_HMC_eb_omega_mean }} $\pm$ {{ cpl_HMC_eb_omega_std }} & {{ cpl_HMC_eb_h0_mean }} $\pm$ {{ cpl_HMC_eb_h0_std }} \\
+ \hline
+ \multirow{4}{*}{\rotatebox[origin=c]{90}{Quint.}} & FCNN & - & - & {{ quintessence_FCNN_no_eb_lambda_mean }} $\pm$ {{ quintessence_FCNN_no_eb_lambda_std }} & - & {{ quintessence_FCNN_no_eb_omega_mean }} $\pm$ {{ quintessence_FCNN_no_eb_omega_std }} & {{ quintessence_FCNN_no_eb_h0_mean }} $\pm$ {{ quintessence_FCNN_no_eb_h0_std }} \\
+ \cline{2-8}
+ & NLM  & - & - & {{ quintessence_NLM_no_eb_lambda_mean }} $\pm$ {{ quintessence_NLM_no_eb_lambda_std }} & - & {{ quintessence_NLM_no_eb_omega_mean }} $\pm$ {{ quintessence_NLM_no_eb_omega_std }} & {{ quintessence_NLM_no_eb_h0_mean }} $\pm$ {{ quintessence_NLM_no_eb_h0_std }} \\
+ & BBB  & - & - & {{ quintessence_BBB_no_eb_lambda_mean }} $\pm$ {{ quintessence_BBB_no_eb_lambda_std }} & - & {{ quintessence_BBB_no_eb_omega_mean }} $\pm$ {{ quintessence_BBB_no_eb_omega_std }} & {{ quintessence_BBB_no_eb_h0_mean }} $\pm$ {{ quintessence_BBB_no_eb_h0_std }} \\
+ & HMC  & - & - & {{ quintessence_HMC_no_eb_lambda_mean }} $\pm$ {{ quintessence_HMC_no_eb_lambda_std }} & - & {{ quintessence_HMC_no_eb_omega_mean }} $\pm$ {{ quintessence_HMC_no_eb_omega_std }} & {{ quintessence_HMC_no_eb_h0_mean }} $\pm$ {{ quintessence_HMC_no_eb_h0_std }} \\
+\hline
+ \multirow{4}{*}{\rotatebox[origin=c]{90}{HS}} & FCNN & - & - & - & {{ hs_FCNN_no_eb_b_mean }} $\pm$ {{ hs_FCNN_no_eb_b_std }} & {{ hs_FCNN_no_eb_omega_mean }} $\pm$ {{ hs_FCNN_no_eb_omega_std }} & {{ hs_FCNN_no_eb_h0_mean }} $\pm$ {{ hs_FCNN_no_eb_h0_std }} \\
+ \cline{2-8}
+ & NLM  & - & - & - & {{ hs_NLM_no_eb_b_mean }} $\pm$ {{ hs_NLM_no_eb_b_std }} & {{ hs_NLM_no_eb_omega_mean }} $\pm$ {{ hs_NLM_no_eb_omega_std }} & {{ hs_NLM_no_eb_h0_mean }} $\pm$ {{ hs_NLM_no_eb_h0_std }} \\
+ & BBB  & - & - & - & {{ hs_BBB_no_eb_b_mean }} $\pm$ {{ hs_BBB_no_eb_b_std }} & {{ hs_BBB_no_eb_omega_mean }} $\pm$ {{ hs_BBB_no_eb_omega_std }} & {{ hs_BBB_no_eb_h0_mean }} $\pm$ {{ hs_BBB_no_eb_h0_std }} \\
+ & HMC  & - & - & - & {{ hs_HMC_no_eb_b_mean }} $\pm$ {{ hs_HMC_no_eb_b_std }} & {{ hs_HMC_no_eb_omega_mean }} $\pm$ {{ hs_HMC_no_eb_omega_std }} & {{ hs_HMC_no_eb_h0_mean }} $\pm$ {{ hs_HMC_no_eb_h0_std }} \\
+ \hline
+ \hline
+\end{tabular}
+
+
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+\begin{tabular}{c c c c c c}
+
+\hline
+\hline
+Method & Approach &  \multicolumn{2}{c}{No Error Bounds} & \multicolumn{2}{c}{Error Bounds} \\ \hline
+ && Across all samples & By coordinates & Across all samples & By coordinates \\
+ NLM & \multirow{3}{*}{Forward} & {{ NLM_forward_no_eb_total_nan_proportion }} & {{ NLM_forward_no_eb_agg_nan_proportion }} & {{ NLM_forward_eb_total_nan_proportion }} & {{ NLM_forward_eb_agg_nan_proportion }} \\
+ BBB &  & {{ BBB_forward_no_eb_total_nan_proportion }} & {{ BBB_forward_no_eb_agg_nan_proportion }} & {{ BBB_forward_eb_total_nan_proportion }} & {{ BBB_forward_eb_agg_nan_proportion }} \\
+ HMC &  & {{ HMC_forward_no_eb_total_nan_proportion }} & {{ HMC_forward_no_eb_agg_nan_proportion }} & {{ HMC_forward_eb_total_nan_proportion }} & {{ HMC_forward_eb_agg_nan_proportion }} \\
+ \hline
+ NLM & \multirow{3}{*}{Bundle} & {{ NLM_bundle_no_eb_total_nan_proportion }} & {{ NLM_bundle_no_eb_agg_nan_proportion }} & {{ NLM_bundle_eb_total_nan_proportion }} & {{ NLM_bundle_eb_agg_nan_proportion }} \\
+ BBB &  & {{ BBB_bundle_no_eb_total_nan_proportion }} & {{ BBB_bundle_no_eb_agg_nan_proportion }} & {{ BBB_bundle_eb_total_nan_proportion }} & {{ BBB_bundle_eb_agg_nan_proportion }} \\
+ HMC &  & {{ HMC_bundle_no_eb_total_nan_proportion }} & {{ HMC_bundle_no_eb_agg_nan_proportion }} & {{ HMC_bundle_eb_total_nan_proportion }} & {{ HMC_bundle_eb_agg_nan_proportion }} \\
+\hline
+\hline
+\end{tabular}
+
+
+\end{document}

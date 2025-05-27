@@ -1,0 +1,10 @@
+sbatch slurm/lcdm_bbb_res_bundle.sh
+sbatch slurm/lcdm_hmc_res_bundle.sh
+sbatch slurm/cpl_bbb_res_bundle.sh
+sbatch slurm/cpl_hmc_res_bundle.sh
+sbatch slurm/quintessence_bbb_res_bundle.sh
+sbatch slurm/quintessence_hmc_res_bundle.sh
+sbatch slurm/hs_bbb_res_bundle.sh
+sbatch slurm/hs_hmc_res_bundle.sh
+sbatch slurm/lab_bbb_res_bundle.sh
+sbatch slurm/lab_hmc_res_bundle.sh

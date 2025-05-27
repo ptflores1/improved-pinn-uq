@@ -1,0 +1,54 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+\begin{tabular}{c c c c c c c c}
+\hline
+\hline
+Equation & Method & $w_0$ & $w_1$ & $\lambda$ & $b$ & $\Omega_{m,0}$ & $H_0$ \\ 
+\hline
+ \multirow{7}{*}{\rotatebox[origin=c]{90}{$\Lambda$CDM}} & FCNN & - & - & - & - & {{ lcdm_FCNN_no_eb_omega }} & {{ lcdm_FCNN_no_eb_h0 }} \\
+ \cline{2-8}
+ & NLM & - & - & - & - & {{ lcdm_NLM_no_eb_omega }} & {{ lcdm_NLM_no_eb_h0 }} \\
+ & BBB & - & - & - & - & {{ lcdm_BBB_no_eb_omega }} & {{ lcdm_BBB_no_eb_h0 }} \\
+ & HMC & - & - & - & - & {{ lcdm_HMC_no_eb_omega }} & {{ lcdm_HMC_no_eb_h0 }} \\
+ \cline{2-8}
+ & NLM + EB & - & - & - & - & {{ lcdm_NLM_eb_omega }} & {{ lcdm_NLM_eb_h0 }} \\
+ & BBB + EB & - & - & - & - & {{ lcdm_BBB_eb_omega }} & {{ lcdm_BBB_eb_h0 }} \\
+ & HMC + EB & - & - & - & - & {{ lcdm_HMC_eb_omega }} & {{ lcdm_HMC_eb_h0 }} \\
+ \hline
+ \multirow{7}{*}{\rotatebox[origin=c]{90}{CPL}} & FCNN & {{ cpl_FCNN_no_eb_w0 }} & {{ cpl_FCNN_no_eb_w1 }} & - & - & {{ cpl_FCNN_no_eb_omega }} & {{ cpl_FCNN_no_eb_h0 }} \\
+ \cline{2-8}
+ & NLM & {{ cpl_NLM_no_eb_w0 }} & {{ cpl_NLM_no_eb_w1 }} & - & - & {{ cpl_NLM_no_eb_omega }} & {{ cpl_NLM_no_eb_h0 }} \\
+ & BBB & {{ cpl_BBB_no_eb_w0 }} & {{ cpl_BBB_no_eb_w1 }} & - & - & {{ cpl_BBB_no_eb_omega }} & {{ cpl_BBB_no_eb_h0 }} \\
+ & HMC & {{ cpl_HMC_no_eb_w0 }} & {{ cpl_HMC_no_eb_w1 }} & - & - & {{ cpl_HMC_no_eb_omega }} & {{ cpl_HMC_no_eb_h0 }} \\
+ \cline{2-8}
+ & NLM + EB & {{ cpl_NLM_eb_w0 }} & {{ cpl_NLM_eb_w1 }} & - & - & {{ cpl_NLM_eb_omega }} & {{ cpl_NLM_eb_h0 }} \\
+ & BBB + EB & {{ cpl_BBB_eb_w0 }} & {{ cpl_BBB_eb_w1 }} & - & - & {{ cpl_BBB_eb_omega }} & {{ cpl_BBB_eb_h0 }} \\
+ & HMC + EB & {{ cpl_HMC_eb_w0 }} & {{ cpl_HMC_eb_w1 }} & - & - & {{ cpl_HMC_eb_omega }} & {{ cpl_HMC_eb_h0 }} \\
+ \hline
+ \multirow{4}{*}{\rotatebox[origin=c]{90}{Quint.}} & FCNN & - & - & {{ quintessence_FCNN_no_eb_lambda }} & - & {{ quintessence_FCNN_no_eb_omega }} & - \\
+ \cline{2-8}
+ & NLM  & - & - & {{ quintessence_NLM_no_eb_lambda }} & - & {{ quintessence_NLM_no_eb_omega }} & - \\
+ & BBB  & - & - & {{ quintessence_BBB_no_eb_lambda }} & - & {{ quintessence_BBB_no_eb_omega }} & - \\
+ & HMC  & - & - & {{ quintessence_HMC_no_eb_lambda }} & - & {{ quintessence_HMC_no_eb_omega }} & - \\
+\hline
+ \multirow{4}{*}{\rotatebox[origin=c]{90}{HS}} & FCNN & - & - & - & {{ hs_FCNN_no_eb_b }} & {{ hs_FCNN_no_eb_omega }} & {{ hs_FCNN_no_eb_h0 }} \\
+ \cline{2-8}
+ & NLM  & - & - & - & {{ hs_NLM_no_eb_b }} & {{ hs_NLM_no_eb_omega }} & {{ hs_NLM_no_eb_h0 }} \\
+ & BBB  & - & - & - & {{ hs_BBB_no_eb_b }} & {{ hs_BBB_no_eb_omega }} & {{ hs_BBB_no_eb_h0 }} \\
+ & HMC  & - & - & - & {{ hs_HMC_no_eb_b }} & {{ hs_HMC_no_eb_omega }} & {{ hs_HMC_no_eb_h0 }} \\
+ \hline
+ \hline
+\end{tabular}
+
+
+\end{document}

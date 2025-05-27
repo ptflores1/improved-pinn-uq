@@ -1,0 +1,56 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+%\begin{tabular}{c c c c c c c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{7}{c}{Forward} & \multicolumn{7}{c}{Bundle} \\ \hline
+% & MAE & MRE & MRPD & Miscal. Area & Std. MAE & Std. MRE & Std. RPD & MAE & MRE & MRPD & Miscal. Area & Std. MAE & Std. MRE & Std. RPD\\
+% FCNN & 4.17& 0.042& 0.04 & - & - & - & - & 62.547& 0.3& 0.268 & - & - & - & - \\
+% \hline
+% NLM & 0.109 & 0.001 & 0.001 & 0.343 & $\mathbf{1.042}$ & 32.584 & 1.513 & 240.168 & 1.918 & 0.768 & 0.492 & 237.79 & $\mathbf{1.185}$ & 1.916 \\
+% BBB & $\mathbf{0.058}$ & $\mathbf{0.0}$ & $\mathbf{0.0}$ & 0.405 & 1.045 & 58.538 & 1.653 & $\mathbf{53.072}$ & $\mathbf{0.239}$ & $\mathbf{0.223}$ & 0.482 & $\mathbf{48.992}$ & 7.159 & $\mathbf{1.596}$ \\
+% HMC & 5.3 & 0.029 & 0.029 & 0.455 & 4.324 & $\mathbf{0.854}$ & $\mathbf{1.321}$ & 69.07 & 0.378 & 0.297 & 0.47 & 67.185 & 7.252 & 1.749 \\
+%\hline
+%\hline
+%\end{tabular}
+
+%\begin{tabular}{c c c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{5}{c}{Forward} & \multicolumn{5}{c}{Bundle} \\ \hline
+% & MRE & MRPD & Miscal. Area & Std. MRE & Std. RPD & MRE & MRPD & Miscal. Area & Std. MRE & Std. RPD\\
+% FCNN & 0.042& 0.04 & - & - & - & 0.3& 0.268 & - & - & - \\
+% \hline
+% NLM & 0.001 & 0.001 & 0.343 & 32.584 & 1.513 & 1.918 & 0.768 & 0.492 & $\mathbf{1.185}$ & 1.916 \\
+% BBB & $\mathbf{0.0}$ & $\mathbf{0.0}$ & 0.405 & 58.538 & 1.653 & $\mathbf{0.239}$ & $\mathbf{0.223}$ & 0.482 & 7.159 & $\mathbf{1.596}$ \\
+% HMC & 0.029 & 0.029 & 0.455 & $\mathbf{0.854}$ & $\mathbf{1.321}$ & 0.378 & 0.297 & 0.47 & 7.252 & 1.749 \\
+%\hline
+%\hline
+%\end{tabular}
+
+\begin{tabular}{c c c c c}
+\hline
+\hline
+Method &  \multicolumn{2}{c}{Forward} & \multicolumn{2}{c}{Bundle} \\ \hline
+ & MRE & Miscal. Area & MRE & Miscal. Area\\
+ FCNN & 0.042 & - & 0.3 & - \\
+ \hline
+ NLM & 0.001 & 0.343 & 1.918 & 0.492 \\
+ BBB & $\mathbf{0.0}$ & 0.405 & $\mathbf{0.239}$ & 0.482 \\
+ HMC & 0.029 & 0.455 & 0.378 & 0.47 \\
+\hline
+\hline
+\end{tabular}
+
+
+\end{document}

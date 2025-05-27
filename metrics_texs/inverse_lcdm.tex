@@ -1,0 +1,32 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+\begin{tabular}{c c c}
+
+\hline
+\hline
+Method & $\Omega_{m,0}$ & $H_0$ \\ \hline
+ FCNN & 0.31 $\pm$ 0.05 & 68.5 $\pm$ 2.63 \\
+ \hline
+ NLM & 0.33 $\pm$ 0.01 & 67.35 $\pm$ 0.46 \\
+ BBB & 0.32 $\pm$ 0.01 & 67.95 $\pm$ 0.39 \\
+ HMC & 0.33 $\pm$ 0.01 & 67.82 $\pm$ 0.38 \\
+ \hline
+ NLM + EB & 0.32 $\pm$ 0.01 & 68.14 $\pm$ 0.31 \\
+ BBB + EB & 0.32 $\pm$ 0.0 & 68.16 $\pm$ 0.29 \\
+ HMC + EB & 0.32 $\pm$ 0.01 & 68.13 $\pm$ 0.31 \\
+\hline
+\hline
+\end{tabular}
+
+
+\end{document}

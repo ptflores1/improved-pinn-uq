@@ -1,0 +1,4 @@
+sbatch slurm/lab_inverse_lab_bbb_ov_bundle.sh
+sbatch slurm/lab_inverse_lab_syn_bbb_ov_bundle.sh
+sbatch slurm/lab_inverse_lab_hmc_ov_bundle.sh
+sbatch slurm/lab_inverse_lab_syn_hmc_ov_bundle.sh

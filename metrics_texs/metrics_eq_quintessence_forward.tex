@@ -1,0 +1,41 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+\begin{tabular}{c c c c c c c c c c c c c c c c c c}
+\hline
+\hline
+ Domain & Method & MRE & Mean Residual & Miscal. Area & RMS Cal. & MA Cal. & Sharpness & NLL & CRPS & Check & Interval & Acc. MAE & Acc. RMSE & Acc. MDAE & Acc. MARPD & Acc. R2 & Acc. Corr. \\
+ \hline
+ \multirow{4}{*}{\rotatebox[origin=c]{90}{Training}} & FCNN &  &  & - & - & - & - & - & - & - & - & - & - & - & - & - & - \\
+ \cline{2-18}
+ & NLM & 0.405 & 0.115 & 0.326 & 0.366 & 0.323 & 0.005 & -4.329 & 0.001 & 0.001 & 0.009 & 0.001 & 0.002 & 0.001 & 23.818 & 0.995 & 0.998 \\
+ & BBB & 0.053 & 0.006 & 0.483 & 0.554 & 0.478 & 0.005 & -4.672 & 0.001 & 0.001 & 0.008 & 0.0 & 0.0 & 0.0 & 5.505 & 1.0 & 1.0 \\
+ & HMC & 0.05 & 0.006 & 0.482 & 0.551 & 0.477 & 0.005 & -4.671 & 0.001 & 0.001 & 0.008 & 0.0 & 0.0 & 0.0 & 5.39 & 1.0 & 1.0 \\
+\hline
+ \multirow{4}{*}{\rotatebox[origin=c]{90}{OOD}} & FCNN &  &  & - & - & - & - & - & - & - & - & - & - & - & - & - & - \\
+ \cline{2-18}
+ & NLM & 0.389 & 0.541 & 0.334 & 0.382 & 0.331 & 0.007 & 106.487 & 0.075 & 0.037 & 0.731 & 0.078 & 0.138 & 0.03 & 24.619 & 0.083 & 0.882 \\
+ & BBB & 0.046 & 0.061 & 0.162 & 0.187 & 0.16 & 0.005 & 5.866 & 0.011 & 0.006 & 0.095 & 0.012 & 0.022 & 0.003 & 5.854 & 0.97 & 0.99 \\
+ & HMC & 0.059 & 0.071 & 0.085 & 0.095 & 0.084 & 0.017 & -2.849 & 0.01 & 0.005 & 0.056 & 0.014 & 0.023 & 0.006 & 7.235 & 0.969 & 0.987 \\
+\hline
+ \multirow{4}{*}{\rotatebox[origin=c]{90}{Testing}} & FCNN &  &  & - & - & - & - & - & - & - & - & - & - & - & - & - & - \\
+ \cline{2-18}
+ & NLM & 0.39 & 0.33 & 0.136 & 0.158 & 0.135 & 0.006 & 51.905 & 0.039 & 0.019 & 0.375 & 0.04 & 0.099 & 0.002 & 24.652 & 0.687 & 0.936 \\
+ & BBB & 0.047 & 0.034 & 0.274 & 0.33 & 0.271 & 0.005 & 0.605 & 0.006 & 0.003 & 0.052 & 0.006 & 0.016 & 0.0 & 6.128 & 0.984 & 0.995 \\
+ & HMC & 0.049 & 0.039 & 0.246 & 0.297 & 0.244 & 0.013 & -3.898 & 0.006 & 0.003 & 0.032 & 0.007 & 0.017 & 0.0 & 6.69 & 0.984 & 0.993 \\
+\hline
+\hline
+
+\end{tabular}
+
+
+\end{document}

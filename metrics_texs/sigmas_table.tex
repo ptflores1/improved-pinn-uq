@@ -1,0 +1,54 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+\begin{tabular}{c c c c c c c c}
+\hline
+\hline
+Equation & Method & $w_0$ & $w_1$ & $\lambda$ & $b$ & $\Omega_{m,0}$ & $H_0$ \\ 
+\hline
+ \multirow{7}{*}{\rotatebox[origin=c]{90}{$\Lambda$CDM}} & FCNN & - & - & - & - & 1$\sigma$ & 1$\sigma$ \\
+ \cline{2-8}
+ & NLM & - & - & - & - & 4$\sigma$ & 5$\sigma$ \\
+ & BBB & - & - & - & - & 5$\sigma$ & 4$\sigma$ \\
+ & HMC & - & - & - & - & 4$\sigma$ & 4$\sigma$ \\
+ \cline{2-8}
+ & NLM + EB & - & - & - & - & 4$\sigma$ & 4$\sigma$ \\
+ & BBB + EB & - & - & - & - & 6$\sigma$ & 4$\sigma$ \\
+ & HMC + EB & - & - & - & - & 5$\sigma$ & 4$\sigma$ \\
+ \hline
+ \multirow{7}{*}{\rotatebox[origin=c]{90}{CPL}} & FCNN & 2$\sigma$ & 1$\sigma$ & - & - & 1$\sigma$ & 1$\sigma$ \\
+ \cline{2-8}
+ & NLM & 2$\sigma$ & 1$\sigma$ & - & - & 1$\sigma$ & 2$\sigma$ \\
+ & BBB & 2$\sigma$ & 2$\sigma$ & - & - & 1$\sigma$ & 2$\sigma$ \\
+ & HMC & 2$\sigma$ & 2$\sigma$ & - & - & 1$\sigma$ & 2$\sigma$ \\
+ \cline{2-8}
+ & NLM + EB & 3$\sigma$ & 1$\sigma$ & - & - & 2$\sigma$ & 2$\sigma$ \\
+ & BBB + EB & 3$\sigma$ & 1$\sigma$ & - & - & 1$\sigma$ & 2$\sigma$ \\
+ & HMC + EB & 2$\sigma$ & 1$\sigma$ & - & - & 1$\sigma$ & 2$\sigma$ \\
+ \hline
+ \multirow{4}{*}{\rotatebox[origin=c]{90}{Quint.}} & FCNN & - & - & 2$\sigma$ & - & 1$\sigma$ & - \\
+ \cline{2-8}
+ & NLM  & - & - & 2$\sigma$ & - & 1$\sigma$ & - \\
+ & BBB  & - & - & 1$\sigma$ & - & 1$\sigma$ & - \\
+ & HMC  & - & - & 1$\sigma$ & - & 1$\sigma$ & - \\
+\hline
+ \multirow{4}{*}{\rotatebox[origin=c]{90}{HS}} & FCNN & - & - & - & 2$\sigma$ & 1$\sigma$ & 1$\sigma$ \\
+ \cline{2-8}
+ & NLM  & - & - & - & 1$\sigma$ & 1$\sigma$ & 1$\sigma$ \\
+ & BBB  & - & - & - & 2$\sigma$ & 1$\sigma$ & 1$\sigma$ \\
+ & HMC  & - & - & - & 1$\sigma$ & 1$\sigma$ & 1$\sigma$ \\
+ \hline
+ \hline
+\end{tabular}
+
+
+\end{document}

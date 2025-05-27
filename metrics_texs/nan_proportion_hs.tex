@@ -1,0 +1,30 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+\begin{tabular}{c c c c}
+
+\hline
+\hline
+ Method & Approach & Across all samples & By coordinates \\ \hline
+ NLM & \multirow{3}{*}{Forward} & 0.0 & 0.0 \\
+ BBB &  & 0.0 & 0.0 \\
+ HMC &  & 0.0 & 0.0 \\
+ \hline
+ NLM & \multirow{3}{*}{Bundle} & 0.003 & 0.003 \\
+ BBB &  & 0.0 & 0.0 \\
+ HMC &  & 0.0 & 0.0 \\
+\hline
+\hline
+\end{tabular}
+
+
+\end{document}

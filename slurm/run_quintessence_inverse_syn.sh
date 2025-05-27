@@ -1,0 +1,4 @@
+sbatch slurm/quintessence_inverse_cc_quint_syn_fcnn_bundle.sh
+sbatch slurm/quintessence_inverse_cc_quint_syn_nlm_bundle.sh
+sbatch slurm/quintessence_inverse_cc_quint_syn_bbb_bundle.sh
+sbatch slurm/quintessence_inverse_cc_quint_syn_hmc_bundle.sh

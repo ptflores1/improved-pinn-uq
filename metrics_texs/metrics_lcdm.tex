@@ -1,0 +1,33 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+\begin{tabular}{c c c c c c c c}
+
+\hline
+\hline
+Method & Approach &  \multicolumn{3}{c}{No Error Bounds} & \multicolumn{3}{c}{Error Bounds} \\ \hline
+ && MAE & Residual & Calibration & MAE & Residual & Calibration\\
+ FCNN & \multirow{4}{*}{Forward} & 9.143 & -1.0 & - & 9.143 & -1.0 & - \\
+ NLM &  & 9.815 & -1.0 & 0.213 & 9.505 & -1.0 & 0.085 \\
+ BBB &  & 10.868 & -1.0 & 0.162 & 12.892 & -1.0 & 0.158 \\
+ HMC &  & 10.262 & -1.0 & 0.205 & 9.906 & -1.0 & 0.067 \\
+ \hline
+ FCNN & \multirow{4}{*}{Bundle} & 9.713 & -1.0 & - & 9.713 & -1.0 & - \\
+ NLM &  & 10.006 & -1.0 & 0.103 & 10.652 & -1.0 & 0.189 \\
+ BBB &  & 10.59 & -1.0 & 0.22 & 16.113 & -1.0 & 0.221 \\
+ HMC &  & 10.467 & -1.0 & 0.185 & 10.247 & -1.0 & 0.081 \\
+\hline
+\hline
+\end{tabular}
+
+
+\end{document}

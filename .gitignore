@@ -1,0 +1,7 @@
+venv
+logs
+/checkpoints*
+__pycache__
+wandb
+plot_data
+.ipynb_checkpoints

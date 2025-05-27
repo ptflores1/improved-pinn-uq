@@ -1,0 +1,27 @@
+#!/bin/bash
+#SBATCH --job-name={{ group_name }}          # Nombre del trabajo
+#SBATCH --chdir=/home/ptflores1/storage/UAI
+#SBATCH --output=logs/{{ job_name }}.log         # Nombre del output (%j se reemplaza por el ID del trabajo)
+#SBATCH --error=logs/{{ job_name }}.log          # Output de errores (opcional)
+#SBATCH --ntasks=1                   # Correr 2 tareas
+#SBATCH --cpus-per-task={{ cpus }}            # Numero de cores por tarea
+#SBATCH --time={{ time }}            # Timpo limite d-hrs:min:sec
+{% if email %}
+#SBATCH --mail-type=END,FAIL         # Enviar eventos al mail (NONE, BEGIN, END, FAIL, ALL)
+#SBATCH --mail-user=ptflores1@uc.cl    # El mail del usuario
+{% endif %}
+{% if gpus %}
+#SBATCH --gres=gpu:{{ gpus }}                   # Usar 2 GPUs (se pueden usar N GPUs de marca especifica de la manera --gres=gpu:marca:N)
+{% endif %}
+{% if exclude %}
+#SBATCH --exclude=kraken,hydra,scylla,yodaxico,icarus
+{% endif %}
+#SBATCH --dependency=singleton
+#SBATCH --partition=ialab-high
+
+date;hostname;pwd
+
+source /home/ptflores1/storage/UAI/venv/bin/activate
+python3 main.py {{ command }}
+
+date

@@ -1,0 +1,4 @@
+sbatch slurm/quintessence_fcnn_bundle.sh
+sbatch slurm/quintessence_nlm_bundle.sh
+sbatch slurm/quintessence_bbb_bundle.sh
+sbatch slurm/quintessence_hmc_bundle.sh

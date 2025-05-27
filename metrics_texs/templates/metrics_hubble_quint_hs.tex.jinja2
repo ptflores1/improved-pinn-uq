@@ -1,0 +1,56 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+%\begin{tabular}{c c c c c c c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{7}{c}{Forward} & \multicolumn{7}{c}{Bundle} \\ \hline
+% & MAE & MRE & MRPD & Miscal. Area & Std. MAE & Std. MRE & Std. RPD & MAE & MRE & MRPD & Miscal. Area & Std. MAE & Std. MRE & Std. RPD\\
+% FCNN & {{ FCNN_forward_no_eb_mae }}& {{ FCNN_forward_no_eb_mre }}& {{ FCNN_forward_no_eb_rpd }} & - & - & - & - & {{ FCNN_bundle_no_eb_mae }}& {{ FCNN_bundle_no_eb_mre }}& {{ FCNN_bundle_no_eb_rpd }} & - & - & - & - \\
+% \hline
+% NLM & {{ NLM_forward_no_eb_mae }} & {{ NLM_forward_no_eb_mre }} & {{ NLM_forward_no_eb_rpd }} & {{ NLM_forward_no_eb_miscal_area }} & {{ NLM_forward_no_eb_std_mae }} & {{ NLM_forward_no_eb_std_mre }} & {{ NLM_forward_no_eb_std_rpd }} & {{ NLM_bundle_no_eb_mae }} & {{ NLM_bundle_no_eb_mre }} & {{ NLM_bundle_no_eb_rpd }} & {{ NLM_bundle_no_eb_miscal_area }} & {{ NLM_bundle_no_eb_std_mae }} & {{ NLM_bundle_no_eb_std_mre }} & {{ NLM_bundle_no_eb_std_rpd }} \\
+% BBB & {{ BBB_forward_no_eb_mae }} & {{ BBB_forward_no_eb_mre }} & {{ BBB_forward_no_eb_rpd }} & {{ BBB_forward_no_eb_miscal_area }} & {{ BBB_forward_no_eb_std_mae }} & {{ BBB_forward_no_eb_std_mre }} & {{ BBB_forward_no_eb_std_rpd }} & {{ BBB_bundle_no_eb_mae }} & {{ BBB_bundle_no_eb_mre }} & {{ BBB_bundle_no_eb_rpd }} & {{ BBB_bundle_no_eb_miscal_area }} & {{ BBB_bundle_no_eb_std_mae }} & {{ BBB_bundle_no_eb_std_mre }} & {{ BBB_bundle_no_eb_std_rpd }} \\
+% HMC & {{ HMC_forward_no_eb_mae }} & {{ HMC_forward_no_eb_mre }} & {{ HMC_forward_no_eb_rpd }} & {{ HMC_forward_no_eb_miscal_area }} & {{ HMC_forward_no_eb_std_mae }} & {{ HMC_forward_no_eb_std_mre }} & {{ HMC_forward_no_eb_std_rpd }} & {{ HMC_bundle_no_eb_mae }} & {{ HMC_bundle_no_eb_mre }} & {{ HMC_bundle_no_eb_rpd }} & {{ HMC_bundle_no_eb_miscal_area }} & {{ HMC_bundle_no_eb_std_mae }} & {{ HMC_bundle_no_eb_std_mre }} & {{ HMC_bundle_no_eb_std_rpd }} \\
+%\hline
+%\hline
+%\end{tabular}
+
+%\begin{tabular}{c c c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{5}{c}{Forward} & \multicolumn{5}{c}{Bundle} \\ \hline
+% & MRE & MRPD & Miscal. Area & Std. MRE & Std. RPD & MRE & MRPD & Miscal. Area & Std. MRE & Std. RPD\\
+% FCNN & {{ FCNN_forward_no_eb_mre }}& {{ FCNN_forward_no_eb_rpd }} & - & - & - & {{ FCNN_bundle_no_eb_mre }}& {{ FCNN_bundle_no_eb_rpd }} & - & - & - \\
+% \hline
+% NLM & {{ NLM_forward_no_eb_mre }} & {{ NLM_forward_no_eb_rpd }} & {{ NLM_forward_no_eb_miscal_area }} & {{ NLM_forward_no_eb_std_mre }} & {{ NLM_forward_no_eb_std_rpd }} & {{ NLM_bundle_no_eb_mre }} & {{ NLM_bundle_no_eb_rpd }} & {{ NLM_bundle_no_eb_miscal_area }} & {{ NLM_bundle_no_eb_std_mre }} & {{ NLM_bundle_no_eb_std_rpd }} \\
+% BBB & {{ BBB_forward_no_eb_mre }} & {{ BBB_forward_no_eb_rpd }} & {{ BBB_forward_no_eb_miscal_area }} & {{ BBB_forward_no_eb_std_mre }} & {{ BBB_forward_no_eb_std_rpd }} & {{ BBB_bundle_no_eb_mre }} & {{ BBB_bundle_no_eb_rpd }} & {{ BBB_bundle_no_eb_miscal_area }} & {{ BBB_bundle_no_eb_std_mre }} & {{ BBB_bundle_no_eb_std_rpd }} \\
+% HMC & {{ HMC_forward_no_eb_mre }} & {{ HMC_forward_no_eb_rpd }} & {{ HMC_forward_no_eb_miscal_area }} & {{ HMC_forward_no_eb_std_mre }} & {{ HMC_forward_no_eb_std_rpd }} & {{ HMC_bundle_no_eb_mre }} & {{ HMC_bundle_no_eb_rpd }} & {{ HMC_bundle_no_eb_miscal_area }} & {{ HMC_bundle_no_eb_std_mre }} & {{ HMC_bundle_no_eb_std_rpd }} \\
+%\hline
+%\hline
+%\end{tabular}
+
+\begin{tabular}{c c c c c}
+\hline
+\hline
+Method &  \multicolumn{2}{c}{Forward} & \multicolumn{2}{c}{Bundle} \\ \hline
+ & MRE & Miscal. Area & MRE & Miscal. Area\\
+ FCNN & {{ FCNN_forward_no_eb_mre }} & - & {{ FCNN_bundle_no_eb_mre }} & - \\
+ \hline
+ NLM & {{ NLM_forward_no_eb_mre }} & {{ NLM_forward_no_eb_miscal_area }} & {{ NLM_bundle_no_eb_mre }} & {{ NLM_bundle_no_eb_miscal_area }} \\
+ BBB & {{ BBB_forward_no_eb_mre }} & {{ BBB_forward_no_eb_miscal_area }} & {{ BBB_bundle_no_eb_mre }} & {{ BBB_bundle_no_eb_miscal_area }} \\
+ HMC & {{ HMC_forward_no_eb_mre }} & {{ HMC_forward_no_eb_miscal_area }} & {{ HMC_bundle_no_eb_mre }} & {{ HMC_bundle_no_eb_miscal_area }} \\
+\hline
+\hline
+\end{tabular}
+
+
+\end{document}

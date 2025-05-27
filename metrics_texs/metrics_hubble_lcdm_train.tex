@@ -1,0 +1,67 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+%\begin{tabular}{c c c c c c c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{7}{c}{Forward} & \multicolumn{7}{c}{Bundle} \\ \hline
+% & MAE & MRE & MRPD & Miscal. Area & Std. MAE & Std. MRE & Std. RPD & MAE & MRE & MRPD & Miscal. Area & Std. MAE & Std. MRE & Std. RPD\\
+% FCNN & 0.004 & 0.0 & 0.0 & - & - & - & - & 0.024 & 0.0 & 0.0 & - & - & - & - \\
+% \hline
+% NLM & 0.033 & 0.0 & 0.0 & 0.484 & 1.802 & 311.613 & 1.924 & 0.247 & 0.002 & 0.002 & 0.382 & 1.458 & 72.684 & 1.516 \\
+% BBB & 0.024 & 0.0 & 0.0 & 0.488 & 1.767 & 290.321 & 1.947 & 0.04 & 0.0 & 0.0 & 0.476 & 1.677 & 634.269 & 1.888 \\
+% HMC & 0.146 & 0.001 & 0.001 & 0.413 & 1.713 & 88.588 & 1.684 & 0.097 & 0.001 & 0.001 & 0.444 & 1.634 & 471.147 & 1.757 \\
+% \hline
+% NLM + EB & 0.004 & 0.0 & 0.0 & 0.46 & 0.099 & 78.486 & 1.815 & 0.043 & 0.0 & 0.0 & 0.019 & 0.03 & 6.894 & 0.674 \\
+% BBB + EB & 0.006 & 0.0 & 0.0 & 0.439 & 0.092 & $\mathbf{50.595}$ & 1.721 & 0.245 & 0.001 & 0.001 & 0.42 & 0.187 & $\mathbf{3.717}$ & 1.113 \\
+% HMC + EB & 0.023 & 0.0 & 0.0 & 0.408 & $\mathbf{0.084}$ & 67.281 & $\mathbf{1.644}$ & 0.044 & 0.0 & 0.0 & 0.04 & $\mathbf{0.029}$ & 6.608 & $\mathbf{0.663}$ \\
+%\hline
+%\hline
+%\end{tabular}
+
+%\begin{tabular}{c c c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{5}{c}{Forward} & \multicolumn{5}{c}{Bundle} \\ \hline
+% & MRE & MRPD & Miscal. Area & Std. MRE & Std. RPD & MRE & MRPD & Miscal. Area & Std. MRE & Std. RPD\\
+% FCNN & 0.0 & 0.0 & - & - & - & 0.0 & 0.0 & - & - & - \\
+% \hline
+% NLM & 0.0 & 0.0 & 0.484 & 311.613 & 1.924 & 0.002 & 0.002 & 0.382 & 72.684 & 1.516 \\
+% BBB & 0.0 & 0.0 & 0.488 & 290.321 & 1.947 & 0.0 & 0.0 & 0.476 & 634.269 & 1.888 \\
+% HMC & 0.001 & 0.001 & 0.413 & 88.588 & 1.684 & 0.001 & 0.001 & 0.444 & 471.147 & 1.757 \\
+% \hline
+% NLM + EB & 0.0 & 0.0 & 0.46 & 78.486 & 1.815 & 0.0 & 0.0 & 0.019 & 6.894 & 0.674 \\
+% BBB + EB & 0.0 & 0.0 & 0.439 & $\mathbf{50.595}$ & 1.721 & 0.001 & 0.001 & 0.42 & $\mathbf{3.717}$ & 1.113 \\
+% HMC + EB & 0.0 & 0.0 & 0.408 & 67.281 & $\mathbf{1.644}$ & 0.0 & 0.0 & 0.04 & 6.608 & $\mathbf{0.663}$ \\
+%\hline
+%\hline
+%\end{tabular}
+
+\begin{tabular}{c c c c c}
+\hline
+\hline
+Method &  \multicolumn{2}{c}{Forward} & \multicolumn{2}{c}{Bundle} \\ \hline
+ & MRE & Miscal. Area & MRE & Miscal. Area \\
+ FCNN & 0.0 & - & 0.0 & - \\
+ \hline
+ NLM & 0.0 & 0.484 & 0.002 & 0.382 \\
+ BBB & 0.0 & 0.488 & 0.0 & 0.476 \\
+ HMC & 0.001 & 0.413 & 0.001 & 0.444 \\
+ \hline
+ NLM + EB & 0.0 & 0.46 & 0.0 & 0.019 \\
+ BBB + EB & 0.0 & 0.439 & 0.001 & 0.42 \\
+ HMC + EB & 0.0 & 0.408 & 0.0 & 0.04 \\
+\hline
+\hline
+\end{tabular}
+
+\end{document}

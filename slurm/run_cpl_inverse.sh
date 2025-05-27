@@ -1,0 +1,7 @@
+sbatch slurm/cpl_inverse_cc_fcnn_bundle.sh
+sbatch slurm/cpl_inverse_cc_nlm_bundle_eb.sh
+sbatch slurm/cpl_inverse_cc_nlm_bundle.sh
+sbatch slurm/cpl_inverse_cc_bbb_bundle_eb.sh
+sbatch slurm/cpl_inverse_cc_bbb_bundle.sh
+sbatch slurm/cpl_inverse_cc_hmc_bundle_eb.sh
+sbatch slurm/cpl_inverse_cc_hmc_bundle.sh

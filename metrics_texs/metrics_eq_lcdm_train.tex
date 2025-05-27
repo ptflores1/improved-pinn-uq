@@ -1,0 +1,87 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+%\begin{tabular}{c c c c c c c c c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{8}{c}{Forward} & \multicolumn{8}{c}{Bundle} \\ \hline
+% & MAE & MRE & MRPD & Mean Residual & Miscal. Area & Std. MAE & Std. MRE & Std. RPD & MAE & MRE & MRPD & Mean Residual & Miscal. Area & Std. MAE & Std. MRE & Std. RPD\\
+% FCNN & $\mathbf{0.0}$ & $\mathbf{0.0}$ & $\mathbf{0.0}$ & $\mathbf{0.0}$ & - & - & - & - & $\mathbf{0.002}$ & $\mathbf{0.0}$ & $\mathbf{0.0}$ & $\mathbf{0.0}$ & - & - & - & - \\
+% \hline
+% NLM & 0.002 & 0.001 & 0.001 & 4.205 & 0.486 & 0.101 & 247.366 & 1.932 & 0.012 & 0.008 & 0.008 & 5.257 & 0.402 & 0.088 & 64.711 & 1.585 \\
+% BBB & 0.001 & 0.001 & 0.001 & 0.11 & 0.486 & 0.098 & 347.714 & 1.942 & 0.003 & 0.001 & 0.001 & 0.11 & 0.474 & 0.097 & 448.764 & 1.883 \\
+% HMC & 0.012 & 0.003 & 0.003 & 0.242 & 0.411 & 0.092 & 117.424 & 1.678 & 0.007 & 0.003 & 0.003 & 0.137 & 0.442 & 0.093 & 717.461 & 1.753 \\
+% \hline
+% NLM + EB & 0.0 & 0.0 & 0.0 & 4.204 & 0.46 & 0.008 & 88.559 & 1.813 & 0.004 & 0.001 & 0.001 & 5.256 & 0.016 & $\mathbf{0.003}$ & 8.288 & 0.675 \\
+% BBB + EB & 0.0 & 0.0 & 0.0 & 0.006 & 0.439 & 0.008 & $\mathbf{49.57}$ & 1.72 & 0.021 & 0.004 & 0.004 & 0.015 & 0.42 & 0.016 & $\mathbf{3.731}$ & 1.113 \\
+% HMC + EB & 0.002 & 0.0 & 0.0 & 0.047 & 0.408 & $\mathbf{0.007}$ & 87.767 & $\mathbf{1.643}$ & 0.004 & 0.001 & 0.001 & 0.026 & 0.04 & 0.003 & 6.863 & $\mathbf{0.663}$ \\
+%\hline
+%\hline
+%\end{tabular}
+
+
+%\begin{tabular}{c c c c c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{6}{c}{Forward} & \multicolumn{6}{c}{Bundle} \\ \hline
+% & MRE & MRPD & Mean Residual & Miscal. Area & Std. MRE & Std. RPD & MRE & MRPD & Mean Residual & Miscal. Area & Std. MRE & Std. RPD\\
+% FCNN & $\mathbf{0.0}$ & $\mathbf{0.0}$ & $\mathbf{0.0}$ & - & - & - & $\mathbf{0.0}$ & $\mathbf{0.0}$ & $\mathbf{0.0}$ & - & - & - \\
+% \hline
+% NLM & 0.001 & 0.001 & 4.205 & 0.486 & 247.366 & 1.932 & 0.008 & 0.008 & 5.257 & 0.402 & 64.711 & 1.585 \\
+% BBB & 0.001 & 0.001 & 0.11 & 0.486 & 347.714 & 1.942 & 0.001 & 0.001 & 0.11 & 0.474 & 448.764 & 1.883 \\
+% HMC & 0.003 & 0.003 & 0.242 & 0.411 & 117.424 & 1.678 & 0.003 & 0.003 & 0.137 & 0.442 & 717.461 & 1.753 \\
+% \hline
+% NLM + EB & 0.0 & 0.0 & 4.204 & 0.46 & 88.559 & 1.813 & 0.001 & 0.001 & 5.256 & 0.016 & 8.288 & 0.675 \\
+% BBB + EB & 0.0 & 0.0 & 0.006 & 0.439 & $\mathbf{49.57}$ & 1.72 & 0.004 & 0.004 & 0.015 & 0.42 & $\mathbf{3.731}$ & 1.113 \\
+% HMC + EB & 0.0 & 0.0 & 0.047 & 0.408 & 87.767 & $\mathbf{1.643}$ & 0.001 & 0.001 & 0.026 & 0.04 & 6.863 & $\mathbf{0.663}$ \\
+%\hline
+%\hline
+%\end{tabular}
+
+%\begin{tabular}{c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{4}{c}{Forward} & \multicolumn{4}{c}{Bundle} \\ \hline
+% & MRE & Mean Residual & Miscal. Area & Std. MRE & MRE & Mean Residual & Miscal. Area & Std. MRE\\
+% FCNN & $\mathbf{0.0}$ & $\mathbf{0.0}$ & - & - & $\mathbf{0.0}$ & $\mathbf{0.0}$ & - & - \\
+% \hline
+% NLM & 0.001 & 4.205 & 0.486 & 247.366 & 0.008 & 5.257 & 0.402 & 64.711 \\
+% BBB & 0.001 & 0.11 & 0.486 & 347.714 & 0.001 & 0.11 & 0.474 & 448.764 \\
+% HMC & 0.003 & 0.242 & 0.411 & 117.424 & 0.003 & 0.137 & 0.442 & 717.461 \\
+% \hline
+% NLM + EB & 0.0 & 4.204 & 0.46 & 88.559 & 0.001 & 5.256 & 0.016 & 8.288 \\
+% BBB + EB & 0.0 & 0.006 & 0.439 & $\mathbf{49.57}$ & 0.004 & 0.015 & 0.42 & $\mathbf{3.731}$ \\
+% HMC + EB & 0.0 & 0.047 & 0.408 & 87.767 & 0.001 & 0.026 & 0.04 & 6.863 \\
+%\hline
+%\hline
+%\end{tabular}
+
+\begin{tabular}{c | c c c c c c c c c c c c c c c c | c c c c c c c c c c c c c c c c}
+\hline
+\hline
+Method &  \multicolumn{16}{c}{Forward} & \multicolumn{16}{c}{Bundle} \\ \hline
+ & MRE & Mean Residual & Miscal. Area & RMS Cal. & MA Cal. & Sharpness & NLL & CRPS & Check & Interval & Acc. MAE & Acc. RMSE & Acc. MDAE & Acc. MARPD & Acc. R2 & Acc. Corr. & MRE & Mean Residual & Miscal. Area & RMS Cal. & MA Cal. & Sharpness & NLL & CRPS & Check & Interval & Acc. MAE & Acc. RMSE & Acc. MDAE & Acc. MARPD & Acc. R2 & Acc. Corr.\\
+ FCNN & $\mathbf{0.0}$ & $\mathbf{0.0}$ & - & - & - & - & - & - & - & - & - & - & - & - & - & - & $\mathbf{0.0}$ & $\mathbf{0.0}$ & - & - & - & - & - & - & - & - & - & - & - & - & - & -\\
+ \hline
+ NLM & 0.001 & 4.205 & 0.486 & 0.557 & 0.481 & 0.103 & -1.386 & 0.024 & 0.012 & 0.162 & 0.002 & 0.003 & 0.001 & 0.109 & 1.0 & 1.0 & 0.008 & 5.257 & 0.402 & 0.456 & 0.398 & 0.1 & -1.402 & 0.024 & 0.012 & 0.159 & 0.012 & 0.015 & 0.01 & 0.83 & 1.0 & 1.0 \\
+ BBB & 0.001 & 0.11 & 0.486 & 0.559 & 0.481 & 0.1 & -1.525 & 0.023 & 0.012 & 0.157 & 0.001 & 0.002 & 0.001 & 0.078 & 1.0 & 1.0 & 0.001 & 0.11 & 0.474 & 0.541 & 0.469 & 0.1 & -1.526 & 0.023 & 0.012 & 0.157 & 0.003 & 0.004 & 0.002 & 0.09 & 1.0 & 1.0 \\
+ HMC & 0.003 & 0.242 & 0.411 & 0.461 & 0.407 & 0.103 & -1.46 & 0.027 & 0.013 & 0.17 & 0.012 & 0.029 & 0.004 & 0.311 & 1.0 & 1.0 & 0.003 & 0.137 & 0.442 & 0.502 & 0.438 & 0.101 & -1.512 & 0.024 & 0.012 & 0.16 & 0.007 & 0.012 & 0.005 & 0.292 & 1.0 & 1.0 \\
+ \hline
+ NLM + EB & 0.0 & 4.204 & 0.46 & 0.528 & 0.455 & 0.013 & -4.642 & 0.002 & 0.001 & 0.014 & 0.0 & 0.001 & 0.0 & 0.007 & 1.0 & 1.0 & 0.001 & 5.256 & 0.016 & 0.02 & 0.015 & 0.008 & -4.449 & 0.003 & 0.001 & 0.013 & 0.004 & 0.007 & 0.002 & 0.073 & 1.0 & 1.0 \\
+ BBB + EB & 0.0 & 0.006 & 0.439 & 0.507 & 0.435 & 0.012 & -4.746 & 0.002 & 0.001 & 0.013 & 0.0 & 0.001 & 0.0 & 0.011 & 1.0 & 1.0 & 0.004 & 0.015 & 0.42 & 0.481 & 0.416 & 0.008 & 4.247 & 0.018 & 0.009 & 0.141 & 0.021 & 0.031 & 0.012 & 0.382 & 1.0 & 1.0 \\
+ HMC + EB & 0.0 & 0.047 & 0.408 & 0.459 & 0.404 & 0.013 & -4.672 & 0.003 & 0.001 & 0.015 & 0.002 & 0.007 & 0.0 & 0.025 & 1.0 & 1.0 & 0.001 & 0.026 & 0.04 & 0.055 & 0.04 & 0.008 & -4.784 & 0.003 & 0.001 & 0.013 & 0.004 & 0.007 & 0.002 & 0.065 & 1.0 & 1.0 \\
+\hline
+\hline
+\end{tabular}
+
+
+\end{document}

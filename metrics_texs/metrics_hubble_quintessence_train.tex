@@ -1,0 +1,56 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+%\begin{tabular}{c c c c c c c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{7}{c}{Forward} & \multicolumn{7}{c}{Bundle} \\ \hline
+% & MAE & MRE & MRPD & Miscal. Area & Std. MAE & Std. MRE & Std. RPD & MAE & MRE & MRPD & Miscal. Area & Std. MAE & Std. MRE & Std. RPD\\
+% FCNN & $\mathbf{0.0}$& $\mathbf{0.0}$& $\mathbf{0.0}$ & - & - & - & - & $\mathbf{0.0}$& $\mathbf{0.0}$& $\mathbf{0.0}$ & - & - & - & - \\
+% \hline
+% NLM & 0.005 & 0.0 & 0.0 & 0.417 & $\mathbf{0.033}$ & 67.252 & 1.645 & 0.012 & 0.0 & 0.0 & 0.292 & $\mathbf{0.024}$ & $\mathbf{28.697}$ & $\mathbf{1.271}$ \\
+% BBB & 0.001 & 0.0 & 0.0 & 0.455 & 0.036 & $\mathbf{24.053}$ & 1.795 & 0.001 & 0.0 & 0.0 & 0.456 & 0.033 & 110.939 & 1.807 \\
+% HMC & 0.002 & 0.0 & 0.0 & 0.454 & 0.036 & 84.337 & 1.792 & 0.002 & 0.0 & 0.0 & 0.452 & 0.033 & 66.855 & 1.79 \\
+%\hline
+%\hline
+%\end{tabular}
+
+%\begin{tabular}{c c c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{5}{c}{Forward} & \multicolumn{5}{c}{Bundle} \\ \hline
+% & MRE & MRPD & Miscal. Area & Std. MRE & Std. RPD & MRE & MRPD & Miscal. Area & Std. MRE & Std. RPD\\
+% FCNN & $\mathbf{0.0}$& $\mathbf{0.0}$ & - & - & - & $\mathbf{0.0}$& $\mathbf{0.0}$ & - & - & - \\
+% \hline
+% NLM & 0.0 & 0.0 & 0.417 & 67.252 & 1.645 & 0.0 & 0.0 & 0.292 & $\mathbf{28.697}$ & $\mathbf{1.271}$ \\
+% BBB & 0.0 & 0.0 & 0.455 & $\mathbf{24.053}$ & 1.795 & 0.0 & 0.0 & 0.456 & 110.939 & 1.807 \\
+% HMC & 0.0 & 0.0 & 0.454 & 84.337 & 1.792 & 0.0 & 0.0 & 0.452 & 66.855 & 1.79 \\
+%\hline
+%\hline
+%\end{tabular}
+
+\begin{tabular}{c c c c c}
+\hline
+\hline
+Method &  \multicolumn{2}{c}{Forward} & \multicolumn{2}{c}{Bundle} \\ \hline
+ & MRE & Miscal. Area & MRE & Miscal. Area\\
+ FCNN & $\mathbf{0.0}$ & - & $\mathbf{0.0}$ & - \\
+ \hline
+ NLM & 0.0 & 0.417 & 0.0 & 0.292 \\
+ BBB & 0.0 & 0.455 & 0.0 & 0.456 \\
+ HMC & 0.0 & 0.454 & 0.0 & 0.452 \\
+\hline
+\hline
+\end{tabular}
+
+
+\end{document}

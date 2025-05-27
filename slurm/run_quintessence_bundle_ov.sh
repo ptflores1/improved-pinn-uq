@@ -1,0 +1,2 @@
+sbatch slurm/quintessence_bbb_ov_bundle.sh
+sbatch slurm/quintessence_hmc_ov_bundle.sh

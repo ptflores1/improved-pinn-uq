@@ -1,0 +1,5 @@
+sbatch slurm/hs_inverse_cc_hs_syn_fcnn_bundle.sh
+sbatch slurm/hs_inverse_cc_hs_syn_clfcnn_bundle.sh
+sbatch slurm/hs_inverse_cc_hs_syn_nlm_bundle.sh
+sbatch slurm/hs_inverse_cc_hs_syn_bbb_bundle.sh
+sbatch slurm/hs_inverse_cc_hs_syn_hmc_bundle.sh

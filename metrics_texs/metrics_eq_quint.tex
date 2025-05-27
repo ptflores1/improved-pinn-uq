@@ -1,0 +1,56 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+%\begin{tabular}{c c c c c c c c c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{8}{c}{Forward} & \multicolumn{8}{c}{Bundle} \\ \hline
+% & MAE & MRE & MRPD & Mean Residual & Miscal. Area & Std. MAE & Std. MRE & Std. RPD & MAE & MRE & MRPD & Mean Residual & Miscal. Area & Std. MAE & Std. MRE & Std. RPD\\
+% FCNN & $\mathbf{0.012}$ & $\mathbf{0.044}$ & $\mathbf{0.049}$ & $\mathbf{0.054}$ & - & - & - & - & $\mathbf{0.006}$ & $\mathbf{0.024}$ & $\mathbf{0.025}$ & $\mathbf{0.027}$ & - & - & - & - \\
+% \hline
+% NLM & 0.015 & 0.076 & 0.097 & 0.249 & 0.29 & 0.018 & 47.815 & 1.423 & 0.04 & 0.39 & 0.247 & 0.33 & $\mathbf{0.136}$ & 0.039 & $\mathbf{102.006}$ & $\mathbf{1.304}$ \\
+% BBB & 0.013 & 0.056 & 0.069 & 0.063 & 0.249 & $\mathbf{0.015}$ & 329.269 & 1.657 & 0.006 & 0.045 & 0.061 & 0.034 & 0.274 & 0.008 & 311.258 & 1.61 \\
+% HMC & 0.029 & 0.135 & 0.171 & 0.121 & $\mathbf{0.192}$ & 0.022 & $\mathbf{37.549}$ & $\mathbf{1.345}$ & 0.007 & 0.052 & 0.067 & 0.039 & 0.246 & $\mathbf{0.007}$ & 581.973 & 1.417 \\
+%\hline
+%\hline
+%\end{tabular}
+
+%\begin{tabular}{c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{4}{c}{Forward} & \multicolumn{4}{c}{Bundle} \\ \hline
+% & MRE & Mean Residual & Miscal. Area & Std. MRE & MRE & Mean Residual & Miscal. Area & Std. MRE\\
+% FCNN & $\mathbf{0.044}$ & $\mathbf{0.054}$ & - & - & $\mathbf{0.024}$ & $\mathbf{0.027}$ & - & - \\
+% \hline
+% NLM & 0.076 & 0.249 & 0.29 & 47.815 & 0.39 & 0.33 & $\mathbf{0.136}$ & $\mathbf{102.006}$ \\
+% BBB & 0.056 & 0.063 & 0.249 & 329.269 & 0.045 & 0.034 & 0.274 & 311.258 \\
+% HMC & 0.135 & 0.121 & $\mathbf{0.192}$ & $\mathbf{37.549}$ & 0.052 & 0.039 & 0.246 & 581.973 \\
+%\hline
+%\hline
+%\end{tabular}
+
+\begin{tabular}{c c c c c c c}
+\hline
+\hline
+Method &  \multicolumn{3}{c}{Forward} & \multicolumn{3}{c}{Bundle} \\ \hline
+ & MRE & Mean Residual & Miscal. Area & MRE & Mean Residual & Miscal. Area\\
+ FCNN & $\mathbf{0.044}$ & $\mathbf{0.054}$ & - & $\mathbf{0.024}$ & $\mathbf{0.027}$ & - \\
+ \hline
+ NLM & 0.076 & 0.249 & 0.29 & 0.39 & 0.33 & $\mathbf{0.136}$ \\
+ BBB & 0.056 & 0.063 & 0.249 & 0.045 & 0.034 & 0.274 \\
+ HMC & 0.135 & 0.121 & $\mathbf{0.192}$ & 0.052 & 0.039 & 0.246 \\
+\hline
+\hline
+\end{tabular}
+
+
+\end{document}

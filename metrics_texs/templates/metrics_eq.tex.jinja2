@@ -1,0 +1,51 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+\begin{tabular}{c c | c c c c c | c c c c c}
+\hline
+\hline
+Equation & Method &  \multicolumn{5}{c}{Forward} & \multicolumn{5}{c}{Bundle} \\ \hline
+ && MRE & RE Q50 & RE Q90 & Mean Residual & Miscal. Area & MRE & RE Q50 & RE Q90 & Mean Residual & Miscal. Area\\
+ \hline
+ \multirow{7}{*}{\rotatebox[origin=c]{90}{$\Lambda$CDM}} & FCNN & {{ lcdm_FCNN_forward_eb_mre }} & {{ lcdm_FCNN_forward_eb_re_q50 }} & {{ lcdm_FCNN_forward_eb_re_q90 }} & {{ lcdm_FCNN_forward_eb_residual }} & - & {{ lcdm_FCNN_bundle_eb_mre }} & {{ lcdm_FCNN_bundle_eb_re_q50 }} & {{ lcdm_FCNN_bundle_eb_re_q90 }} & {{ lcdm_FCNN_bundle_eb_residual }} & - \\
+ \cline{2-12}
+ & NLM & {{ lcdm_NLM_forward_no_eb_mre }} & {{ lcdm_NLM_forward_no_eb_re_q50 }} & {{ lcdm_NLM_forward_no_eb_re_q90 }} & {{ lcdm_NLM_forward_no_eb_residual }} & {{ lcdm_NLM_forward_no_eb_miscal_area }} & {{ lcdm_NLM_bundle_no_eb_mre }} & {{ lcdm_NLM_bundle_no_eb_re_q50 }} & {{ lcdm_NLM_bundle_no_eb_re_q90 }} & {{ lcdm_NLM_bundle_no_eb_residual }} & {{ lcdm_NLM_bundle_no_eb_miscal_area }} \\
+ & BBB & {{ lcdm_BBB_forward_no_eb_mre }} & {{ lcdm_BBB_forward_no_eb_re_q50 }} & {{ lcdm_BBB_forward_no_eb_re_q90 }} & {{ lcdm_BBB_forward_no_eb_residual }} & {{ lcdm_BBB_forward_no_eb_miscal_area }} & {{ lcdm_BBB_bundle_no_eb_mre }} & {{ lcdm_BBB_bundle_no_eb_re_q50 }} & {{ lcdm_BBB_bundle_no_eb_re_q90 }} & {{ lcdm_BBB_bundle_no_eb_residual }} & {{ lcdm_BBB_bundle_no_eb_miscal_area }} \\
+ & HMC & {{ lcdm_HMC_forward_no_eb_mre }} & {{ lcdm_HMC_forward_no_eb_re_q50 }} & {{ lcdm_HMC_forward_no_eb_re_q90 }} & {{ lcdm_HMC_forward_no_eb_residual }} & {{ lcdm_HMC_forward_no_eb_miscal_area }} & {{ lcdm_HMC_bundle_no_eb_mre }} & {{ lcdm_HMC_bundle_no_eb_re_q50 }} & {{ lcdm_HMC_bundle_no_eb_re_q90 }} & {{ lcdm_HMC_bundle_no_eb_residual }} & {{ lcdm_HMC_bundle_no_eb_miscal_area }} \\
+ \cline{2-12}
+ & NLM + EB & {{ lcdm_NLM_forward_eb_mre }} & {{ lcdm_NLM_forward_eb_re_q50 }} & {{ lcdm_NLM_forward_eb_re_q90 }} & {{ lcdm_NLM_forward_eb_residual }} & {{ lcdm_NLM_forward_eb_miscal_area }} & {{ lcdm_NLM_bundle_eb_mre }} & {{ lcdm_NLM_bundle_eb_re_q50 }} & {{ lcdm_NLM_bundle_eb_re_q90 }} & {{ lcdm_NLM_bundle_eb_residual }} & {{ lcdm_NLM_bundle_eb_miscal_area }} \\
+ & BBB + EB & {{ lcdm_BBB_forward_eb_mre }} & {{ lcdm_BBB_forward_eb_re_q50 }} & {{ lcdm_BBB_forward_eb_re_q90 }} & {{ lcdm_BBB_forward_eb_residual }} & {{ lcdm_BBB_forward_eb_miscal_area }} & {{ lcdm_BBB_bundle_eb_mre }} & {{ lcdm_BBB_bundle_eb_re_q50 }} & {{ lcdm_BBB_bundle_eb_re_q90 }} & {{ lcdm_BBB_bundle_eb_residual }} & {{ lcdm_BBB_bundle_eb_miscal_area }} \\
+ & HMC + EB & {{ lcdm_HMC_forward_eb_mre }} & {{ lcdm_HMC_forward_eb_re_q50 }} & {{ lcdm_HMC_forward_eb_re_q90 }} & {{ lcdm_HMC_forward_eb_residual }} & {{ lcdm_HMC_forward_eb_miscal_area }} & {{ lcdm_HMC_bundle_eb_mre }} & {{ lcdm_HMC_bundle_eb_re_q50 }} & {{ lcdm_HMC_bundle_eb_re_q90 }} & {{ lcdm_HMC_bundle_eb_residual }} & {{ lcdm_HMC_bundle_eb_miscal_area }} \\
+ \hline
+ \multirow{5}{*}{\rotatebox[origin=c]{90}{CPL}} & FCNN & {{ cpl_FCNN_forward_eb_mre }} & {{ cpl_FCNN_forward_eb_re_q50 }} & {{ cpl_FCNN_forward_eb_re_q90 }} & {{ cpl_FCNN_forward_eb_residual }} & - & {{ lcdm_FCNN_bundle_eb_mre }} & {{ lcdm_FCNN_bundle_eb_re_q50 }} & {{ lcdm_FCNN_bundle_eb_re_q90 }} & {{ lcdm_FCNN_bundle_eb_residual }} & -\\
+ \cline{2-12}
+ & BBB & {{ cpl_BBB_forward_no_eb_mre }} & {{ cpl_BBB_forward_no_eb_re_q50 }} & {{ cpl_BBB_forward_no_eb_re_q90 }} & {{ cpl_BBB_forward_no_eb_residual }} & {{ cpl_BBB_forward_no_eb_miscal_area }} & {{ cpl_BBB_bundle_no_eb_mre }} & {{ cpl_BBB_bundle_no_eb_re_q50 }} & {{ cpl_BBB_bundle_no_eb_re_q90 }} & {{ cpl_BBB_bundle_no_eb_residual }} & {{ cpl_BBB_bundle_no_eb_miscal_area }} \\
+ & HMC & {{ cpl_HMC_forward_no_eb_mre }} & {{ cpl_HMC_forward_no_eb_re_q50 }} & {{ cpl_HMC_forward_no_eb_re_q90 }} & {{ cpl_HMC_forward_no_eb_residual }} & {{ cpl_HMC_forward_no_eb_miscal_area }} & {{ cpl_HMC_bundle_no_eb_mre }} & {{ cpl_HMC_bundle_no_eb_re_q50 }} & {{ cpl_HMC_bundle_no_eb_re_q90 }} & {{ cpl_HMC_bundle_no_eb_residual }} & {{ cpl_HMC_bundle_no_eb_miscal_area }} \\
+ \cline{2-12}
+ & BBB + EB & {{ cpl_BBB_forward_eb_mre }} & {{ cpl_BBB_forward_eb_re_q50 }} & {{ cpl_BBB_forward_eb_re_q90 }} & {{ cpl_BBB_forward_eb_residual }} & {{ cpl_BBB_forward_eb_miscal_area }} & {{ cpl_BBB_bundle_eb_mre }} & {{ cpl_BBB_bundle_eb_re_q50 }} & {{ cpl_BBB_bundle_eb_re_q90 }} & {{ cpl_BBB_bundle_eb_residual }} & {{ cpl_BBB_bundle_eb_miscal_area }} \\
+ & HMC + EB & {{ cpl_HMC_forward_eb_mre }} & {{ cpl_HMC_forward_eb_re_q50 }} & {{ cpl_HMC_forward_eb_re_q90 }} & {{ cpl_HMC_forward_eb_residual }} & {{ cpl_HMC_forward_eb_miscal_area }} & {{ cpl_HMC_bundle_eb_mre }} & {{ cpl_HMC_bundle_eb_re_q50 }} & {{ cpl_HMC_bundle_eb_re_q90 }} & {{ cpl_HMC_bundle_eb_residual }} & {{ cpl_HMC_bundle_eb_miscal_area }} \\
+ \hline
+ \multirow{4}{*}{\rotatebox[origin=c]{90}{Quint.}} & FCNN & {{ quintessence_FCNN_forward_no_eb_mre }} & {{ quintessence_FCNN_forward_no_eb_re_q50 }} & {{ quintessence_FCNN_forward_no_eb_re_q90 }} & {{ quintessence_FCNN_forward_no_eb_residual }} & - & {{ quintessence_FCNN_bundle_no_eb_mre }} & {{ quintessence_FCNN_bundle_no_eb_re_q50 }} & {{ quintessence_FCNN_bundle_no_eb_re_q90 }} & {{ quintessence_FCNN_bundle_no_eb_residual }} & - \\
+ \cline{2-12}
+ & NLM & {{ quintessence_NLM_forward_no_eb_mre }} & {{ quintessence_NLM_forward_no_eb_re_q50 }} & {{ quintessence_NLM_forward_no_eb_re_q90 }} & {{ quintessence_NLM_forward_no_eb_residual }} & {{ quintessence_NLM_forward_no_eb_miscal_area }} & {{ quintessence_NLM_bundle_no_eb_mre }} & {{ quintessence_NLM_bundle_no_eb_re_q50 }} & {{ quintessence_NLM_bundle_no_eb_re_q90 }} & {{ quintessence_NLM_bundle_no_eb_residual }} & {{ quintessence_NLM_bundle_no_eb_miscal_area }} \\
+ & BBB & {{ quintessence_BBB_forward_no_eb_mre }} & {{ quintessence_BBB_forward_no_eb_re_q50 }} & {{ quintessence_BBB_forward_no_eb_re_q90 }} & {{ quintessence_BBB_forward_no_eb_residual }} & {{ quintessence_BBB_forward_no_eb_miscal_area }} & {{ quintessence_BBB_bundle_no_eb_mre }} & {{ quintessence_BBB_bundle_no_eb_re_q50 }} & {{ quintessence_BBB_bundle_no_eb_re_q90 }} & {{ quintessence_BBB_bundle_no_eb_residual }} & {{ quintessence_BBB_bundle_no_eb_miscal_area }} \\
+ & HMC & {{ quintessence_HMC_forward_no_eb_mre }} & {{ quintessence_HMC_forward_no_eb_re_q50 }} & {{ quintessence_HMC_forward_no_eb_re_q90 }} & {{ quintessence_HMC_forward_no_eb_residual }} & {{ quintessence_HMC_forward_no_eb_miscal_area }} & {{ quintessence_HMC_bundle_no_eb_mre }} & {{ quintessence_HMC_bundle_no_eb_re_q50 }} & {{ quintessence_HMC_bundle_no_eb_re_q90 }} & {{ quintessence_HMC_bundle_no_eb_residual }} & {{ quintessence_HMC_bundle_no_eb_miscal_area }} \\
+ \hline
+ \multirow{4}{*}{\rotatebox[origin=c]{90}{HS}} & FCNN & {{ lcdm_FCNN_forward_eb_mre }} & {{ lcdm_FCNN_forward_eb_re_q50 }} & {{ lcdm_FCNN_forward_eb_re_q90 }} & {{ lcdm_FCNN_forward_eb_residual }} & - & {{ lcdm_FCNN_bundle_eb_mre }} & {{ lcdm_FCNN_bundle_eb_re_q50 }} & {{ lcdm_FCNN_bundle_eb_re_q90 }} & {{ lcdm_FCNN_bundle_eb_residual }} & - \\
+ \cline{2-12}
+ & NLM & {{ hs_NLM_forward_no_eb_mre }} & {{ hs_NLM_forward_no_eb_re_q50 }} & {{ hs_NLM_forward_no_eb_re_q90 }} & {{ hs_NLM_forward_no_eb_residual }} & {{ hs_NLM_forward_no_eb_miscal_area }} & {{ hs_NLM_bundle_no_eb_mre }} & {{ hs_NLM_bundle_no_eb_re_q50 }} & {{ hs_NLM_bundle_no_eb_re_q90 }} & {{ hs_NLM_bundle_no_eb_residual }} & {{ hs_NLM_bundle_no_eb_miscal_area }} \\
+ & BBB & {{ hs_BBB_forward_no_eb_mre }} & {{ hs_BBB_forward_no_eb_re_q50 }} & {{ hs_BBB_forward_no_eb_re_q90 }} & {{ hs_BBB_forward_no_eb_residual }} & {{ hs_BBB_forward_no_eb_miscal_area }} & {{ hs_BBB_bundle_no_eb_mre }} & {{ hs_BBB_bundle_no_eb_re_q50 }} & {{ hs_BBB_bundle_no_eb_re_q90 }} & {{ hs_BBB_bundle_no_eb_residual }} & {{ hs_BBB_bundle_no_eb_miscal_area }} \\
+ & HMC & {{ hs_HMC_forward_no_eb_mre }} & {{ hs_HMC_forward_no_eb_re_q50 }} & {{ hs_HMC_forward_no_eb_re_q90 }} & {{ hs_HMC_forward_no_eb_residual }} & {{ hs_HMC_forward_no_eb_miscal_area }} & {{ hs_HMC_bundle_no_eb_mre }} & {{ hs_HMC_bundle_no_eb_re_q50 }} & {{ hs_HMC_bundle_no_eb_re_q90 }} & {{ hs_HMC_bundle_no_eb_residual }} & {{ hs_HMC_bundle_no_eb_miscal_area }} \\
+\end{tabular}
+
+
+\end{document}

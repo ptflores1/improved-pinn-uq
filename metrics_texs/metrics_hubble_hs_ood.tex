@@ -1,0 +1,56 @@
+\documentclass[convert={outext=.png}]{standalone} 
+\usepackage{multirow}
+\usepackage{adjustbox}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+
+\centering
+%\caption{Experimental Results}
+\label{tab:experimental_results}
+
+%\begin{tabular}{c c c c c c c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{7}{c}{Forward} & \multicolumn{7}{c}{Bundle} \\ \hline
+% & MAE & MRE & MRPD & Miscal. Area & Std. MAE & Std. MRE & Std. RPD & MAE & MRE & MRPD & Miscal. Area & Std. MAE & Std. MRE & Std. RPD\\
+% FCNN & $\mathbf{0.119}$& $\mathbf{0.0}$& $\mathbf{0.0}$ & - & - & - & - & 165.145& 0.254& 0.229 & - & - & - & - \\
+% \hline
+% NLM & 77.932 & 0.083 & 0.089 & 0.202 & 76.797 & 2.226 & 0.814 & 363.834 & 0.408 & 0.539 & 0.491 & 360.537 & $\mathbf{1.105}$ & 1.906 \\
+% BBB & 1.097 & 0.001 & 0.001 & 0.309 & $\mathbf{3.207}$ & 19.426 & 1.27 & $\mathbf{84.247}$ & $\mathbf{0.138}$ & $\mathbf{0.127}$ & 0.424 & $\mathbf{77.693}$ & 9.814 & $\mathbf{1.477}$ \\
+% HMC & 6.741 & 0.01 & 0.009 & 0.243 & 3.822 & $\mathbf{1.659}$ & $\mathbf{0.683}$ & 160.214 & 0.266 & 0.214 & 0.453 & 153.934 & 11.464 & 1.671 \\
+%\hline
+%\hline
+%\end{tabular}
+
+%\begin{tabular}{c c c c c c c c c c c}
+%\hline
+%\hline
+%Method &  \multicolumn{5}{c}{Forward} & \multicolumn{5}{c}{Bundle} \\ \hline
+% & MRE & MRPD & Miscal. Area & Std. MRE & Std. RPD & MRE & MRPD & Miscal. Area & Std. MRE & Std. RPD\\
+% FCNN & $\mathbf{0.0}$& $\mathbf{0.0}$ & - & - & - & 0.254& 0.229 & - & - & - \\
+% \hline
+% NLM & 0.083 & 0.089 & 0.202 & 2.226 & 0.814 & 0.408 & 0.539 & 0.491 & $\mathbf{1.105}$ & 1.906 \\
+% BBB & 0.001 & 0.001 & 0.309 & 19.426 & 1.27 & $\mathbf{0.138}$ & $\mathbf{0.127}$ & 0.424 & 9.814 & $\mathbf{1.477}$ \\
+% HMC & 0.01 & 0.009 & 0.243 & $\mathbf{1.659}$ & $\mathbf{0.683}$ & 0.266 & 0.214 & 0.453 & 11.464 & 1.671 \\
+%\hline
+%\hline
+%\end{tabular}
+
+\begin{tabular}{c c c c c}
+\hline
+\hline
+Method &  \multicolumn{2}{c}{Forward} & \multicolumn{2}{c}{Bundle} \\ \hline
+ & MRE & Miscal. Area & MRE & Miscal. Area\\
+ FCNN & $\mathbf{0.0}$ & - & 0.254 & - \\
+ \hline
+ NLM & 0.083 & 0.202 & 0.408 & 0.491 \\
+ BBB & 0.001 & 0.309 & $\mathbf{0.138}$ & 0.424 \\
+ HMC & 0.01 & 0.243 & 0.266 & 0.453 \\
+\hline
+\hline
+\end{tabular}
+
+
+\end{document}
